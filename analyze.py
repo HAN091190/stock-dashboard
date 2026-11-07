@@ -14,6 +14,8 @@ import pandas as pd
 import requests
 import yfinance as yf
 
+import macro
+
 ROOT = Path(__file__).parent
 TZ_TW = timezone(timedelta(hours=8))
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
@@ -244,6 +246,13 @@ def main():
         m = evaluate(prices["^TWII"])
         market = {k: m[k] for k in ("close", "change_pct", "ma20", "ma60", "rsi", "verdict", "bull", "bear", "spark")}
 
+    name_of = lambda c: universe.get(c, {}).get("name", c)
+    hold_codes = [str(h["code"]) for h in holdings]
+    tw_syms = [(ticker(c), name_of(c)) for c in dict.fromkeys(hold_codes + cfg.get("earnings_tw", []))
+               if not c.startswith("00")]  # ETF 沒有財報
+    rev_codes = list(dict.fromkeys([c for c in hold_codes if not c.startswith("00")] + cfg.get("revenue_tw", [])))
+
+    print("抓取總經、日曆、營收、新聞…")
     out = {
         "updated": datetime.now(TZ_TW).strftime("%Y-%m-%d %H:%M"),
         "scanned": len([c for c in liquid if c in results]),
@@ -251,7 +260,15 @@ def main():
         "holdings": my,
         "picks": picks,
         "watchlist": watch,
+        "global": macro.safe(macro.markets, default=[]),
+        "us_macro": macro.safe(macro.us_macro, default=[]),
+        "calendar": macro.safe(macro.calendar, cfg, tw_syms, default=[]),
+        "revenue": macro.safe(macro.revenue, rev_codes, default=[]),
+        "news": macro.safe(macro.news, cfg, [{"code": c, "name": name_of(c)} for c in hold_codes
+                                              if not c.startswith("00")], default=[]),
     }
+    for r in out["revenue"]:
+        r["holding"] = r["code"] in hold_codes
     (ROOT / "docs").mkdir(exist_ok=True)
     (ROOT / "docs" / "data.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     (ROOT / "report.md").write_text(report_md(out), encoding="utf-8")
@@ -281,6 +298,7 @@ def report_md(out):
     else:
         lines.append("尚未設定持股。")
 
+    lines += report_macro_md(out)
     lines += ["", "## 今日可留意的進場標的", ""]
     if out["picks"]:
         lines += ["| 股票 | 收盤 | 漲跌 | 分數 | 參考停損 | 訊號 |", "|---|---:|---:|---:|---:|---|"]
@@ -290,8 +308,41 @@ def report_md(out):
     else:
         lines.append("今天沒有符合條件的標的。")
 
-    lines += ["", "---", "依技術指標自動產生，僅供參考，不構成投資建議。"]
+    lines += ["", "---", "依技術指標與公開資料自動產生，僅供參考，不構成投資建議。"]
     return "\n".join(lines)
+
+
+def report_macro_md(out):
+    L = []
+    g = out.get("global") or []
+    if g:
+        L += ["", "## 國際市場・利率・原物料", "", "| 指標 | 最新 | 日變動 | 週變動 |", "|---|---:|---:|---:|"]
+        for x in g:
+            if x["kind"] == "yield":
+                L.append(f"| {x['name']} | {x['value']:.3f}% | {x['chg']:+.1f} bp | {x['chg5']:+.1f} bp |")
+            else:
+                L.append(f"| {x['name']} | {x['value']:,.2f} | {x['chg']:+.2f}% | {x['chg5']:+.2f}% |")
+    u = out.get("us_macro") or []
+    if u:
+        L += ["", "**美國總經最新數據**：" + "｜".join(f"{x['name']} {x['value']}（前期 {x['prev']}，{x['period']}）" for x in u)]
+    cal = out.get("calendar") or []
+    L += ["", "## 未來 30 天財經日曆", ""]
+    if cal:
+        L += [f"- **{e['date'][5:]}** {e['event']}" for e in cal]
+    else:
+        L.append("近期無已知重要事件。")
+    rev = out.get("revenue") or []
+    if rev:
+        L += ["", "## 月營收追蹤（★ 為持股）", "", "| 公司 | 月份 | 營收(億) | 月增 | 年增 | 累計年增 |",
+              "|---|---|---:|---:|---:|---:|"]
+        for r in sorted(rev, key=lambda r: (not r.get("holding"), -r["yoy"])):
+            star = "★ " if r.get("holding") else ""
+            L.append(f"| {star}{r['code']} {r['name']} | {r['period']} | {r['revenue']:,.1f} | {r['mom']:+.1f}% | "
+                     f"{r['yoy']:+.1f}% | {r['ytd_yoy']:+.1f}% |")
+    for sec in out.get("news") or []:
+        L += ["", f"## 新聞：{sec['topic']}", ""]
+        L += [f"- [{n['title']}]({n['link']}) — {n['source']} {n['time']}" for n in sec["items"]]
+    return L
 
 
 if __name__ == "__main__":

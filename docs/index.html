@@ -47,6 +47,31 @@ svg.spark { width: 100%; height: 44px; display: block; margin-top: 8px; }
 .empty { color: var(--muted); font-size: 14px; padding: 16px; border: 1px dashed var(--line); border-radius: 12px; }
 .note { margin-top: 36px; color: var(--muted); font-size: 12.5px; border-top: 1px solid var(--line); padding-top: 14px; }
 .ret { font-size: 13px; font-weight: 600; }
+.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.tile .t { color: var(--muted); font-size: 12.5px; }
+.tile .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.tile .c { font-size: 12.5px; font-variant-numeric: tabular-nums; }
+#usmacro { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 13px; }
+.pill b { font-variant-numeric: tabular-nums; }
+.cal { list-style: none; margin: 0; padding: 0; }
+.cal li { display: flex; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.cal li:last-child { border-bottom: 0; }
+.cal .dt { font-weight: 600; min-width: 64px; font-variant-numeric: tabular-nums; }
+.tag { font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--chip-n); color: var(--muted); margin-left: auto; white-space: nowrap; align-self: center; }
+.tablewrap { overflow-x: auto; padding: 4px 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { padding: 7px 8px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+th { color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+.news ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.news li { padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.news li:last-child { border-bottom: 0; }
+.news a { color: var(--text); text-decoration: none; }
+.news a:hover { color: var(--accent); text-decoration: underline; }
+.news .src { color: var(--muted); font-size: 12px; display: block; }
 </style>
 </head>
 <body>
@@ -60,6 +85,19 @@ svg.spark { width: 100%; height: 44px; display: block; margin-top: 8px; }
 
   <h2>我的持股 <small>持有中的股票今日訊號</small></h2>
   <div class="grid" id="holdings"></div>
+
+  <h2>國際市場・利率・原物料 <small>影響台股資金面的關鍵指標</small></h2>
+  <div class="tiles" id="global"></div>
+  <div id="usmacro"></div>
+
+  <h2>未來 30 天財經日曆</h2>
+  <div class="card" id="calendar"></div>
+
+  <h2>月營收追蹤 <small>★ 為持股</small></h2>
+  <div class="card tablewrap" id="revenue"></div>
+
+  <h2>新聞焦點 <small>川普、總經、科技大廠、持股</small></h2>
+  <div class="grid news" id="news"></div>
 
   <h2>今日可留意的進場標的 <small id="picks-sub"></small></h2>
   <div class="grid" id="picks"></div>
@@ -110,6 +148,38 @@ function fill(id, list, showReturn, emptyMsg) {
     : `<div class="empty">${emptyMsg}</div>`;
 }
 
+function renderMacro(d) {
+  const $ = id => document.getElementById(id);
+  $("global").innerHTML = (d.global || []).map(x => {
+    const y = x.kind === "yield";
+    const v = y ? x.value.toFixed(3) + "%" : fmt(x.value);
+    const c = y ? `${x.chg > 0 ? "+" : ""}${x.chg.toFixed(1)} bp` : sign(x.chg);
+    const c5 = y ? `${x.chg5 > 0 ? "+" : ""}${x.chg5.toFixed(1)} bp` : sign(x.chg5);
+    return `<div class="tile"><div class="t">${esc(x.name)}</div><div class="v">${v}</div>
+      <div class="c"><span class="${cls(x.chg)}">日 ${c}</span>　<span class="${cls(x.chg5)}">週 ${c5}</span></div></div>`;
+  }).join("") || '<div class="empty">今日無法取得國際市場資料。</div>';
+
+  $("usmacro").innerHTML = (d.us_macro || []).map(x =>
+    `<span class="pill">${esc(x.name)} <b>${esc(x.value)}</b> <span style="color:var(--muted)">前期 ${esc(x.prev)}・${esc(x.period)}</span></span>`).join("");
+
+  const tagName = { macro: "總經", earnings: "財報/法說", revenue: "營收" };
+  $("calendar").innerHTML = (d.calendar || []).length
+    ? `<ul class="cal">${d.calendar.map(e => `<li><span class="dt">${esc(e.date.slice(5))}</span><span>${esc(e.event)}</span>
+        <span class="tag">${tagName[e.type] || ""}</span></li>`).join("")}</ul>`
+    : "近期無已知重要事件。";
+
+  const rev = [...(d.revenue || [])].sort((a, b) => (b.holding - a.holding) || (b.yoy - a.yoy));
+  $("revenue").innerHTML = rev.length ? `<table><thead><tr><th>公司</th><th>月份</th><th>營收(億)</th><th>月增</th><th>年增</th><th>累計年增</th></tr></thead>
+    <tbody>${rev.map(r => `<tr title="${esc(r.note)}"><td>${r.holding ? "★ " : ""}${esc(r.code)} ${esc(r.name)}</td><td>${esc(r.period)}</td>
+      <td>${fmt(r.revenue, 1)}</td><td class="${cls(r.mom)}">${sign(r.mom)}</td><td class="${cls(r.yoy)}">${sign(r.yoy)}</td>
+      <td class="${cls(r.ytd_yoy)}">${sign(r.ytd_yoy)}</td></tr>`).join("")}</tbody></table>` : "無營收資料。";
+
+  $("news").innerHTML = (d.news || []).map(s => `<div class="card"><div class="name">${esc(s.topic)}</div><ul>
+    ${s.items.map(n => `<li><a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a>
+      <span class="src">${esc(n.source)}・${esc(n.time)}</span></li>`).join("")}</ul></div>`).join("")
+    || '<div class="empty">今日無新聞資料。</div>';
+}
+
 fetch("data.json?t=" + Date.now()).then(r => r.json()).then(d => {
   document.getElementById("meta").textContent = `更新時間 ${d.updated}（台灣時間）・今日掃描 ${d.scanned} 檔成交熱絡股票`;
   if (d.market) {
@@ -119,6 +189,7 @@ fetch("data.json?t=" + Date.now()).then(r => r.json()).then(d => {
         .replace(/<span>K\/D[^<]*<\/span><span>參考停損[^<]*<\/span>/, "")}`;
   }
   fill("holdings", d.holdings, true, "尚未設定持股。請在 GitHub Secret「HOLDINGS」或本機 holdings.json 填入持股。");
+  renderMacro(d);
   document.getElementById("picks-sub").textContent = "依技術面評分排序，分數越高訊號越多";
   fill("picks", d.picks, false, "今天沒有符合條件的標的，觀望也是一種策略。");
   fill("watchlist", d.watchlist, false, "觀察清單是空的，可在 config.json 的 watchlist 加入股票代號。");

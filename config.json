@@ -4,5 +4,22 @@
   "max_candidates": 400,
   "min_score": 5,
   "top_picks": 20,
-  "stop_loss_pct": 10
+  "stop_loss_pct": 10,
+
+  "calendar_days": 30,
+  "earnings_us": {
+    "NVDA": "輝達 NVIDIA", "AAPL": "蘋果 Apple", "MSFT": "微軟 Microsoft", "GOOGL": "Google",
+    "AMZN": "亞馬遜 Amazon", "META": "Meta", "TSLA": "特斯拉 Tesla", "AVGO": "博通 Broadcom",
+    "AMD": "超微 AMD", "MU": "美光 Micron", "TSM": "台積電 ADR"
+  },
+  "earnings_tw": ["2317", "2454", "2382", "3711", "2303", "3231", "6669", "2357"],
+  "revenue_tw": ["2330", "2317", "2454", "2308", "2382", "3711", "2303", "3231", "6669", "2357"],
+  "manual_events": [],
+
+  "news_topics": [
+    {"name": "川普 / 關稅 / 美國政策", "query": "(川普 OR Trump) (關稅 OR 政策 OR 行政命令 OR 晶片) when:1d", "limit": 6},
+    {"name": "美國總經：CPI、非農、聯準會", "query": "(CPI OR 非農 OR 聯準會 OR Fed OR 鮑爾 OR PCE OR 通膨) 美國 when:1d", "limit": 6},
+    {"name": "美債殖利率 / 原油 / 美元", "query": "(美債殖利率 OR 原油 OR OPEC OR 美元指數) when:1d", "limit": 5},
+    {"name": "科技大廠財報與法說會", "query": "(法說會 OR 財報 OR 營收) (台積電 OR 輝達 OR 鴻海 OR 聯發科 OR 蘋果 OR 微軟 OR 廣達 OR 博通) when:1d", "limit": 6}
+  ]
 }
