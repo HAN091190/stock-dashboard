@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   analyze:
@@ -29,3 +30,13 @@ jobs:
           git add docs/data.json
           git diff --cached --quiet || git commit -m "每日分析 $(TZ=Asia/Taipei date +%F)"
           git push
+      - name: 寄送日報（建立 Issue，GitHub 會寄 Email 通知）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create daily-report --color 2e6bd8 --description "每日台股日報" 2>/dev/null || true
+          for n in $(gh issue list --label daily-report --state open --json number --jq '.[].number'); do
+            gh issue close "$n"
+          done
+          gh issue create --title "台股日報 $(TZ=Asia/Taipei date +%F)" --body-file report.md \
+            --label daily-report --assignee "${{ github.repository_owner }}"

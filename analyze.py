@@ -254,7 +254,44 @@ def main():
     }
     (ROOT / "docs").mkdir(exist_ok=True)
     (ROOT / "docs" / "data.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    (ROOT / "report.md").write_text(report_md(out), encoding="utf-8")
     print(f"完成：掃描 {out['scanned']} 檔，推薦 {len(picks)} 檔")
+
+
+def report_md(out):
+    """產生寄送用的 Markdown 日報。"""
+    site = "https://han091190.github.io/stock-dashboard/"
+    sign = lambda n: f"{n:+.2f}%"
+    sigs = lambda r: "、".join(["▲" + s for s in r["bull"]] + ["▼" + s for s in r["bear"]]) or "無明顯訊號"
+    lines = [f"更新時間 {out['updated']}（台灣時間）｜[開啟完整網頁]({site})", ""]
+    m = out.get("market")
+    if m:
+        lines += [f"**大盤 加權指數** {m['close']:,.2f}（{sign(m['change_pct'])}）・{m['verdict']}・{sigs(m)}", ""]
+
+    lines += ["## 我的持股", ""]
+    if out["holdings"]:
+        lines += ["| 股票 | 收盤 | 漲跌 | 報酬 | 評等 | 參考停損 | 訊號 |", "|---|---:|---:|---:|---|---:|---|"]
+        for r in out["holdings"]:
+            ret = sign(r["return_pct"]) if "return_pct" in r else "—"
+            lines.append(f"| {r['code']} {r['name']} | {r['close']:,} | {sign(r['change_pct'])} | {ret} | "
+                         f"{r['verdict']} ({r['score']:+d}) | {r['stop']:,} | {sigs(r)} |")
+        alerts = [r for r in out["holdings"] if any(k in "".join(r["bear"]) for k in ("跌破月線", "停損", "死亡交叉"))]
+        if alerts:
+            lines += ["", "**⚠ 需留意：** " + "、".join(f"{r['code']} {r['name']}" for r in alerts)]
+    else:
+        lines.append("尚未設定持股。")
+
+    lines += ["", "## 今日可留意的進場標的", ""]
+    if out["picks"]:
+        lines += ["| 股票 | 收盤 | 漲跌 | 分數 | 參考停損 | 訊號 |", "|---|---:|---:|---:|---:|---|"]
+        for r in out["picks"]:
+            lines.append(f"| {r['code']} {r['name']} | {r['close']:,} | {sign(r['change_pct'])} | "
+                         f"{r['score']:+d} | {r['stop']:,} | {sigs(r)} |")
+    else:
+        lines.append("今天沒有符合條件的標的。")
+
+    lines += ["", "---", "依技術指標自動產生，僅供參考，不構成投資建議。"]
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":
