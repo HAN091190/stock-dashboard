@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07 23:05",
+ "updated": "2026-11-07 23:08",
  "scanned": 399,
  "market": {
   "close": 39701.64,
@@ -1662,7 +1662,32 @@
    "chg5": -12.15
   }
  ],
- "us_macro": [],
+ "us_macro": [
+  {
+   "name": "CPI 年增率",
+   "value": "4.0%",
+   "prev": "3.7%",
+   "period": "2026-09"
+  },
+  {
+   "name": "核心 CPI 年增率",
+   "value": "2.8%",
+   "prev": "2.8%",
+   "period": "2026-09"
+  },
+  {
+   "name": "非農新增就業",
+   "value": "+165 千人",
+   "prev": "+60 千人",
+   "period": "2026-10"
+  },
+  {
+   "name": "失業率",
+   "value": "4.1%",
+   "prev": "4.2%",
+   "period": "2026-10"
+  }
+ ],
  "calendar": [
   {
    "date": "2026-11-10",
@@ -1979,12 +2004,6 @@
    "topic": "科技大廠財報與法說會",
    "items": [
     {
-     "title": "TWA00 加權指數- 記憶體廠財報亮眼，台積電與群聯最新動態解析- 股市爆料同學會",
-     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9NeHNrSmU4V1o4LWprWXQ5VlZ3RVNMbDdGNlJrSjVXemNFQUdDSVVfME5aWEg5VENJYjRkRUt1TTdiOHVteDhWSGttamNHSjlxYTdEUFVVRXQ?oc=5",
-     "source": "CMoney",
-     "time": "11/07 21:31"
-    },
-    {
      "title": "看好台積電還會漲！外媒最新預測出爐 輝達、博通都靠它",
      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5GTUs4YWxCVHVhX3UtTWVsNW9oYk56TW1PMzZIMHdNeGVKajFacXBmN0NKcFZYYjhxVjZSamJlaEE2cXBoOXRwbTFWcGxzTXpIWFc0SldVMTl2NGVxMmJ6Z2h1emXSAWRBVV95cUxORk1LOGFsQlR1YV91LU1lbDVvaGJOek1tTzM2SDB3TXhlSmoxWnFwZjdDSnBWWGI4cVY2UmpiZWhBNnFwaDl0cG0xVnBsc016SFhXNEpXVTE5djRlcTJiemdodXpl?oc=5",
      "source": "自由財經",
@@ -2013,6 +2032,12 @@
      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9XaGlycl9MT0RQX2stMlhyT1ZiTGQyd1VXa3BqdEo5bk5NNHRHRmFfeXQ5Wmd0dXhMbnJEeFN2U3Nra0xiazdVSGQzRVlPb01jMHc4SFVDM0VOVkFtVlh1T2VTNVZ3dGsyQ3g2WFNGQmtNTER0RkRoN1hldWtwOWs?oc=5",
      "source": "CMoney投資網誌",
      "time": "11/07 11:02"
+    },
+    {
+     "title": "聯發科 AI ASIC 第四季營收上看 25 億美元，蔡力行：AI 投資回收仍有過渡期",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOYjdYMkdZdzUwSldzYjAwRUtyakhidVNpdHcyWGtLdENjSEkwcVlFYU5yUFZ5UU9WcENNMnpMa1d6ZjAxOUhnZm9nTXhqdlR4dlVRQ1NmVXZfUGlHT0dMSlpHYUdKNDJhcHhEVXg1OEVCbnItbC1DY2tXZ25KamxBM3hBeWVHajlwM1QxTmREY1FmQQ?oc=5",
+     "source": "TechNews 科技新報",
+     "time": "11/07 09:04"
     }
    ]
   },
@@ -2020,16 +2045,16 @@
    "topic": "我的持股相關新聞",
    "items": [
     {
+     "title": "【台積電】TWA00 加權指數- 台積電、英特爾財報營收差2.83倍、營業利益差10.8倍 - 股市爆料同學會",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0xdXJUd3loT1djLU9PSXRwYktCMm8zNTRBa1ZwQjRfYjAtcHRoVnZkdldkdGo3OHVJX0FGcWN5cTVfVXpjVmVuQko0ZkNtYkxKR0ZKbTJwVlA?oc=5",
+     "source": "CMoney",
+     "time": "11/07 20:48"
+    },
+    {
      "title": "【台積電】台積電、英特爾財報兩樣情！營收差2.83倍、營業利益差10.8倍 關鍵在現金流？",
      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ZMXdYZUhoQXhqZU5QclB1Vk1udERVTTVIYUZmdlJuaENKWGlRV2V3QkczSFQyUmtwMWcwaWtlWkd6LVRqWUdPTXRfTkJHZmJqSVlZcGJIcl9zd9IBX0FVX3lxTE55YkQzRXBrZFBWSzlsSm9iSU94U0FRSDFGTzdsTTBjTzJhaEN2NW96d2J3UjBCRXZlVDZTaUZVOExHanY4R1ZWelk2R2M5WVBrRjRzRGtZVV9qaWhQWU0w?oc=5",
      "source": "經濟日報",
      "time": "11/06 23:11"
-    },
-    {
-     "title": "【台積電】台積電10月營收將公布 看財測達成度",
-     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1TcXV2NnZSaHR5MUpnTV9Xdk40c191c2xxdWNaem5KMTJIUi1nWTVudHFndVh6c0g5WGdRempJRHA5c0lpYTgtcGM1SmMtd3RzcWV6cw?oc=5",
-     "source": "小刀專欄",
-     "time": "11/06 20:40"
     },
     {
      "title": "【金居】大摩看超微財報：伺服器 CPU 強勁成長 看好八台股、不看好四台股",
