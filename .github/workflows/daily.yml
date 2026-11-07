@@ -1,0 +1,31 @@
+name: 每日股票分析
+
+on:
+  schedule:
+    - cron: "30 7 * * 1-5"   # 週一到週五 台灣時間 15:30（收盤後）
+  workflow_dispatch:          # 也可在 GitHub 上手動執行
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 執行分析
+        env:
+          HOLDINGS: ${{ secrets.HOLDINGS }}
+        run: python analyze.py
+      - name: 提交結果
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json
+          git diff --cached --quiet || git commit -m "每日分析 $(TZ=Asia/Taipei date +%F)"
+          git push

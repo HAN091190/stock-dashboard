@@ -1,0 +1,8 @@
+{
+  "watchlist": ["2330", "2317", "2454", "0050"],
+  "min_trade_value": 100000000,
+  "max_candidates": 400,
+  "min_score": 5,
+  "top_picks": 20,
+  "stop_loss_pct": 10
+}
