@@ -1,5 +1,4 @@
 """總經、國際市場、財經日曆、營收與新聞追蹤。每個區塊獨立，失敗只會略過該區塊。"""
-import io
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -60,33 +59,37 @@ def markets():
     return out
 
 
-# ---------- 美國總經數據（FRED，無需金鑰） ----------
+# ---------- 美國總經數據（BLS 官方 API） ----------
 
-def fred_series(sid):
-    r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": sid}, headers=UA, timeout=20)
+def bls_series(ids):
+    """美國勞工統計局官方公開 API（v2 無金鑰：每日 25 次，足夠使用）。"""
+    r = requests.post("https://api.bls.gov/publicAPI/v2/timeseries/data/", json={"seriesid": ids},
+                      headers={**UA, "Content-type": "application/json"}, timeout=30)
     r.raise_for_status()
-    df = pd.read_csv(io.StringIO(r.text))
-    df.columns = ["date", "value"]
-    df["value"] = pd.to_numeric(df["value"], errors="coerce")
-    return df.dropna()
+    j = r.json()
+    if j.get("status") != "REQUEST_SUCCEEDED":
+        raise RuntimeError(j.get("message"))
+    out = {}
+    for s in j["Results"]["series"]:
+        rows = [(f"{d['year']}-{d['period'][1:]}", float(d["value"])) for d in s["data"]
+                if d["period"].startswith("M") and d["period"] != "M13" and d["value"] not in ("-", "")]
+        out[s["seriesID"]] = pd.Series(dict(sorted(rows)))
+    return out
 
 
 def us_macro():
+    s = bls_series(["CUUR0000SA0", "CUUR0000SA0L1E", "CES0000000001", "LNS14000000"])
     out = []
-    for sid, name in (("CPIAUCSL", "CPI 年增率"), ("CPILFESL", "核心 CPI 年增率")):
-        df = fred_series(sid)
-        yoy = (df["value"].iloc[-1] / df["value"].iloc[-13] - 1) * 100
-        prev = (df["value"].iloc[-2] / df["value"].iloc[-14] - 1) * 100
-        out.append({"name": name, "value": f"{yoy:.1f}%", "prev": f"{prev:.1f}%", "period": df["date"].iloc[-1][:7]})
-    df = fred_series("PAYEMS")
-    chg, prev = df["value"].diff().iloc[-1], df["value"].diff().iloc[-2]
-    out.append({"name": "非農新增就業", "value": f"{chg:+,.0f} 千人", "prev": f"{prev:+,.0f} 千人", "period": df["date"].iloc[-1][:7]})
-    df = fred_series("UNRATE")
-    out.append({"name": "失業率", "value": f"{df['value'].iloc[-1]:.1f}%", "prev": f"{df['value'].iloc[-2]:.1f}%",
-                "period": df["date"].iloc[-1][:7]})
-    df = fred_series("FEDFUNDS")
-    out.append({"name": "聯邦基金有效利率", "value": f"{df['value'].iloc[-1]:.2f}%", "prev": f"{df['value'].iloc[-2]:.2f}%",
-                "period": df["date"].iloc[-1][:7]})
+    for sid, name in (("CUUR0000SA0", "CPI 年增率"), ("CUUR0000SA0L1E", "核心 CPI 年增率")):
+        v = s[sid]
+        yoy = (v.iloc[-1] / v.iloc[-13] - 1) * 100
+        prev = (v.iloc[-2] / v.iloc[-14] - 1) * 100
+        out.append({"name": name, "value": f"{yoy:.1f}%", "prev": f"{prev:.1f}%", "period": v.index[-1]})
+    v = s["CES0000000001"].diff()
+    out.append({"name": "非農新增就業", "value": f"{v.iloc[-1]:+,.0f} 千人", "prev": f"{v.iloc[-2]:+,.0f} 千人",
+                "period": v.index[-1]})
+    v = s["LNS14000000"]
+    out.append({"name": "失業率", "value": f"{v.iloc[-1]:.1f}%", "prev": f"{v.iloc[-2]:.1f}%", "period": v.index[-1]})
     return out
 
 
