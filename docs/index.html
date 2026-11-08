@@ -81,6 +81,11 @@ tr:last-child td { border-bottom: 0; }
     <div class="meta" id="meta">載入中…</div>
   </header>
 
+  <section id="intraday" hidden>
+    <h2>盤中訊號 <small id="intraday-sub"></small></h2>
+    <div class="card tablewrap" id="intraday-list"></div>
+  </section>
+
   <section id="market"></section>
 
   <h2>我的持股 <small>持有中的股票今日訊號</small></h2>
@@ -179,6 +184,22 @@ function renderMacro(d) {
       <span class="src">${esc(n.source)}・${esc(n.time)}</span></li>`).join("")}</ul></div>`).join("")
     || '<div class="empty">今日無新聞資料。</div>';
 }
+
+fetch("intraday.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(s => {
+  if (!s) return;
+  const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+  const $ = id => document.getElementById(id);
+  $("intraday").hidden = false;
+  $("intraday-sub").textContent = `${s.date === today ? "今日" : s.date}・最後檢查 ${s.updated.slice(11)}・每 15 分鐘更新`;
+  const act = { "出場警示": "down", "進場訊號": "up", "加碼參考": "up" };
+  const rows = (s.alerts || []).map(a => `<tr><td>${esc(a.at)}</td><td>${esc(a.code)} ${esc(a.name)}</td>
+    <td class="${act[a.action]}" style="text-align:left;font-weight:600">${esc(a.action)}</td>
+    <td>${fmt(a.price)}</td><td class="${cls(a.change_pct)}">${sign(a.change_pct)}</td>
+    <td style="text-align:left;white-space:normal">${a.signals.map(esc).join("、")}</td></tr>`).join("");
+  $("intraday-list").innerHTML = rows
+    ? `<table><thead><tr><th>時間</th><th>股票</th><th style="text-align:left">類型</th><th>價格</th><th>漲跌</th><th style="text-align:left">訊號</th></tr></thead><tbody>${rows}</tbody></table>`
+    : "目前沒有新的進出場訊號。";
+}).catch(() => {});
 
 fetch("data.json?t=" + Date.now()).then(r => r.json()).then(d => {
   document.getElementById("meta").textContent = `更新時間 ${d.updated}（台灣時間）・今日掃描 ${d.scanned} 檔成交熱絡股票`;

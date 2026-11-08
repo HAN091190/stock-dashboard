@@ -1,0 +1,57 @@
+name: 盤中訊號
+
+on:
+  schedule:
+    # 週一到週五 台灣時間 09:07～13:37 每 15 分鐘（避開整點，GitHub 排程較不會延遲）
+    - cron: "7,22,37,52 1-5 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 檢查盤中訊號
+        env:
+          HOLDINGS: ${{ secrets.HOLDINGS }}
+        run: python intraday.py
+      - name: 提交結果
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/intraday.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "盤中訊號 $(TZ=Asia/Taipei date '+%F %H:%M')"
+          git pull --rebase -q && git push
+      - name: 發送提醒（當天的 Issue 留言，GitHub 會寄 Email / App 推播）
+        if: hashFiles('alert.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="盤中訊號 $(TZ=Asia/Taipei date +%F)"
+          gh label create intraday-alert --color d92d20 --description "盤中進出場訊號" 2>/dev/null || true
+          n=$(gh issue list --label intraday-alert --state open --json number,title \
+                --jq ".[] | select(.title == \"$title\") | .number" | head -1)
+          if [ -n "$n" ]; then
+            gh issue comment "$n" --body-file alert.md
+          else
+            for old in $(gh issue list --label intraday-alert --state open --json number --jq '.[].number'); do
+              gh issue close "$old"
+            done
+            gh issue create --title "$title" --body-file alert.md \
+              --label intraday-alert --assignee "${{ github.repository_owner }}"
+          fi

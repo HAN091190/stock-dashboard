@@ -9,6 +9,10 @@ permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
@@ -29,7 +33,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data.json
           git diff --cached --quiet || git commit -m "每日分析 $(TZ=Asia/Taipei date +%F)"
-          git push
+          git pull --rebase -q && git push
       - name: 寄送日報（建立 Issue，GitHub 會寄 Email 通知）
         env:
           GH_TOKEN: ${{ github.token }}

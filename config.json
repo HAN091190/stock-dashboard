@@ -5,6 +5,7 @@
   "min_score": 5,
   "top_picks": 20,
   "stop_loss_pct": 10,
+  "intraday": {"drop_pct": 5, "include_picks": true},
 
   "calendar_days": 30,
   "earnings_us": {
