@@ -18,6 +18,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+      LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -37,8 +40,13 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "盤中訊號 $(TZ=Asia/Taipei date '+%F %H:%M')"
           git pull --rebase -q && git push
-      - name: 發送提醒（當天的 Issue 留言，GitHub 會寄 Email / App 推播）
-        if: hashFiles('alert.md') != ''
+      - name: LINE 推播盤中訊號
+        id: line
+        if: hashFiles('alert.md') != '' && env.LINE_CHANNEL_ACCESS_TOKEN != ''
+        continue-on-error: true
+        run: python notify_line.py alert.md
+      - name: 備援：當天的 Issue 留言（未設定 LINE 或推播失敗時）
+        if: hashFiles('alert.md') != '' && (env.LINE_CHANNEL_ACCESS_TOKEN == '' || steps.line.outcome == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

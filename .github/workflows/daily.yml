@@ -16,6 +16,9 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    env:
+      LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+      LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,7 +37,13 @@ jobs:
           git add docs/data.json
           git diff --cached --quiet || git commit -m "每日分析 $(TZ=Asia/Taipei date +%F)"
           git pull --rebase -q && git push
-      - name: 寄送日報（建立 Issue，GitHub 會寄 Email 通知）
+      - name: LINE 推播日報
+        id: line
+        if: env.LINE_CHANNEL_ACCESS_TOKEN != ''
+        continue-on-error: true
+        run: python notify_line.py report.md "台股日報 $(TZ=Asia/Taipei date +%F)"
+      - name: 備援：建立 Issue（未設定 LINE 或推播失敗時，GitHub 會寄 Email）
+        if: env.LINE_CHANNEL_ACCESS_TOKEN == '' || steps.line.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

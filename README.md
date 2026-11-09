@@ -11,7 +11,7 @@
    - 財經日曆：FOMC 會議（聯準會官網）、美股科技巨頭與台股大廠財報 / 法說日期、台股營收公布日
    - 月營收：持股與科技大廠的月增 / 年增（證交所、櫃買中心 OpenAPI）
    - 新聞：川普政策、CPI / 非農 / 聯準會、美債原油美元、科技大廠法說、持股相關（Google News RSS）
-5. 結果寫入 `docs/data.json`，由 GitHub Pages 顯示在 `docs/index.html`，並開 Issue 寄 Email 日報
+5. 結果寫入 `docs/data.json`，由 GitHub Pages 顯示在 `docs/index.html`，並用 LINE 推播日報（見下方「LINE 通知」）
 
 ## 盤中訊號提醒
 
@@ -20,8 +20,7 @@
 - 用證交所即時報價（延遲約 5 秒）代入今天的 K 棒，重算均線、KD、MACD、RSI
 - **持股**：出現出場訊號（跌破月線、跌破參考停損、死亡交叉、MACD 翻空、RSI 過熱、盤中急跌、虧損達停損線）→ 🔴 出場警示；出現多方訊號 → 🔵 加碼參考
 - **昨日推薦標的 + 觀察清單**：出現進場訊號（突破 20 日高、黃金交叉、MACD 翻多、帶量上漲）且分數達 `min_score` → 🟢 進場訊號
-- 同一檔的同一個訊號一天只提醒一次；提醒會留言在當天的「盤中訊號」Issue，GitHub 會寄 Email。
-  手機安裝 GitHub App 並開啟通知，可以收到即時推播
+- 同一檔的同一個訊號一天只提醒一次；提醒用 LINE 推播
 - 網頁最上方會顯示當天的盤中訊號
 
 `config.json` 的 `intraday`：`drop_pct` 急跌警示 %、`include_picks` 是否監控昨日推薦標的。
@@ -56,3 +55,14 @@ python -m http.server 8765 --directory docs
 ```
 
 僅供學習參考，不構成投資建議。
+
+## LINE 通知
+
+日報與盤中訊號都由 `notify_line.py` 透過 LINE Messaging API 推播（LINE Notify 已於 2025 年停止服務）。
+
+1. 到 [LINE Developers](https://developers.line.biz/console/) 建立 Provider → Messaging API channel（會同時建立一個 LINE 官方帳號）
+2. Messaging API 分頁：用 QR code 把官方帳號加為好友，並在下方 Issue 一個 **Channel access token (long-lived)**
+3. Basic settings 分頁最下方複製 **Your user ID**（U 開頭）
+4. 設定 GitHub Secrets：`LINE_CHANNEL_ACCESS_TOKEN`、`LINE_USER_ID`
+
+未設定 Secrets 或推播失敗（例如免費額度用完）時，會自動改用原本的 GitHub Issue + Email 通知。
