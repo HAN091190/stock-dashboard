@@ -58,7 +58,7 @@ python -m http.server 8765 --directory docs
 
 ## LINE 通知
 
-日報與盤中訊號都由 `notify_line.py` 透過 LINE Messaging API 推播（LINE Notify 已於 2025 年停止服務）。
+日報由 `line_daily.py` 做成 4 張可左右滑動的 Flex 卡片（持股總覽／國際總經／進場標的／新聞，點新聞標題直接開啟，不顯示長網址），盤中訊號由 `notify_line.py` 以純文字推播；兩者都走 LINE Messaging API（LINE Notify 已於 2025 年停止服務）。本機預覽：`DRY_RUN=1 python line_daily.py`。
 
 1. 到 [LINE Developers](https://developers.line.biz/console/) 建立 Provider → Messaging API channel（會同時建立一個 LINE 官方帳號）
 2. Messaging API 分頁：用 QR code 把官方帳號加為好友，並在下方 Issue 一個 **Channel access token (long-lived)**

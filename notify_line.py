@@ -39,7 +39,7 @@ def md_to_text(md):
                        + "".join(f"\n   {r}" for r in long_))
             continue
         header = None
-        s = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r"\1 \2", s)  # 連結
+        s = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r"\1", s)  # 連結只留文字，不放長網址
         s = re.sub(r"\*\*(.+?)\*\*", r"\1", s)
         m = re.match(r"(#{1,6})\s+(.*)", s)
         if m:
@@ -71,19 +71,24 @@ def split_bubbles(text):
     return bubbles
 
 
-def push(bubbles):
+def push(messages, exit_on_fail=True):
+    """messages：字串（純文字）或 LINE message 物件（例如 Flex），最多 5 則。"""
     token = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
     user = os.environ["LINE_USER_ID"]
+    msgs = [{"type": "text", "text": m} if isinstance(m, str) else m for m in messages]
     r = requests.post(
         "https://api.line.me/v2/bot/message/push",
         headers={"Authorization": f"Bearer {token}"},
-        json={"to": user, "messages": [{"type": "text", "text": b} for b in bubbles]},
+        json={"to": user, "messages": msgs},
         timeout=30,
     )
     if r.status_code != 200:
         print(f"LINE 推播失敗 {r.status_code}: {r.text}", file=sys.stderr)
-        sys.exit(1)
-    print(f"LINE 推播成功，共 {len(bubbles)} 則")
+        if exit_on_fail:
+            sys.exit(1)
+        return False
+    print(f"LINE 推播成功，共 {len(msgs)} 則")
+    return True
 
 
 if __name__ == "__main__":

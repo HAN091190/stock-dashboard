@@ -41,7 +41,7 @@ jobs:
         id: line
         if: env.LINE_CHANNEL_ACCESS_TOKEN != ''
         continue-on-error: true
-        run: python notify_line.py report.md "台股日報 $(TZ=Asia/Taipei date +%F)"
+        run: python line_daily.py docs/data.json
       - name: 備援：建立 Issue（未設定 LINE 或推播失敗時，GitHub 會寄 Email）
         if: env.LINE_CHANNEL_ACCESS_TOKEN == '' || steps.line.outcome == 'failure'
         env:
