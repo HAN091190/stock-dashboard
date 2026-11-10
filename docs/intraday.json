@@ -8,10 +8,28 @@
   "6112|▲突破  日高點",
   "6148|▲突破  日高點",
   "6443|▲ 日線黃金交叉月線",
+  "6488|▲帶量上漲（量 >  倍均量）",
   "6538|▲ 日線黃金交叉月線",
   "8358|▲KD 低檔黃金交叉"
  ],
  "alerts": [
+  {
+   "code": "6488",
+   "name": "環球晶",
+   "price": 609.0,
+   "change_pct": 8.17,
+   "score": 1,
+   "verdict": "中性",
+   "ma20": 783.15,
+   "stop": 453.57,
+   "holding": true,
+   "time": "11:52:07",
+   "action": "加碼參考",
+   "signals": [
+    "▲帶量上漲（量 > 1.5 倍均量）"
+   ],
+   "at": "11:53"
+  },
   {
    "code": "1477",
    "name": "聚陽",
@@ -150,115 +168,115 @@
    "at": "10:06"
   }
  ],
- "updated": "2026-11-10 10:56",
+ "updated": "2026-11-10 11:53",
  "holdings": [
   {
    "code": "0050",
    "name": "元大台灣50",
-   "price": 99.35,
-   "change_pct": 1.95,
+   "price": 98.65,
+   "change_pct": 1.23,
    "score": 0,
    "verdict": "中性",
-   "ma20": 104.95,
+   "ma20": 104.92,
    "stop": 91.24,
    "holding": true,
-   "time": "10:55:59"
+   "time": "11:52:04"
   },
   {
    "code": "00631L",
    "name": "元大台灣50正2",
-   "price": 30.0,
-   "change_pct": 3.81,
+   "price": 29.67,
+   "change_pct": 2.66,
    "score": 0,
    "verdict": "中性",
-   "ma20": 34.33,
+   "ma20": 34.32,
    "stop": 25.19,
    "holding": true,
-   "time": "10:55:59"
+   "time": "11:52:44"
   },
   {
    "code": "2330",
    "name": "台積電",
-   "price": 2255.0,
-   "change_pct": 0.89,
+   "price": 2230.0,
+   "change_pct": -0.22,
    "score": 0,
    "verdict": "中性",
-   "ma20": 2360.75,
+   "ma20": 2359.5,
    "stop": 2109.29,
    "holding": true,
-   "time": "10:56:00"
+   "time": "11:52:05"
   },
   {
    "code": "8358",
    "name": "金居",
-   "price": 366.0,
-   "change_pct": 9.91,
+   "price": 363.5,
+   "change_pct": 9.16,
    "score": 0,
    "verdict": "中性",
-   "ma20": 423.05,
+   "ma20": 422.93,
    "stop": 263.29,
    "holding": true,
-   "time": "10:55:55"
+   "time": "11:51:58"
   },
   {
    "code": "3163",
    "name": "波若威",
-   "price": 477.5,
-   "change_pct": 9.9,
+   "price": 473.0,
+   "change_pct": 8.86,
    "score": 0,
    "verdict": "中性",
-   "ma20": 531.95,
+   "ma20": 531.73,
    "stop": 359.5,
    "holding": true,
-   "time": "10:55:01"
+   "time": "11:51:59"
   },
   {
    "code": "2449",
    "name": "京元電子",
-   "price": 228.5,
-   "change_pct": 9.07,
-   "score": 0,
+   "price": 222.5,
+   "change_pct": 6.21,
+   "score": -1,
    "verdict": "中性",
-   "ma20": 259.07,
+   "ma20": 258.77,
    "stop": 178.07,
    "holding": true,
-   "time": "10:55:56"
+   "time": "11:52:25"
   },
   {
    "code": "6488",
    "name": "環球晶",
-   "price": 619.0,
-   "change_pct": 9.95,
-   "score": 0,
+   "price": 609.0,
+   "change_pct": 8.17,
+   "score": 1,
    "verdict": "中性",
-   "ma20": 783.65,
+   "ma20": 783.15,
    "stop": 453.57,
    "holding": true,
-   "time": "10:55:51"
+   "time": "11:52:07"
   },
   {
    "code": "2308",
    "name": "台達電",
-   "price": 1275.0,
-   "change_pct": 9.91,
+   "price": 1265.0,
+   "change_pct": 9.05,
    "score": 0,
    "verdict": "中性",
-   "ma20": 1457.75,
+   "ma20": 1457.25,
    "stop": 978.57,
    "holding": true,
-   "time": "10:55:58"
+   "time": "11:51:59"
   },
   {
    "code": "4989",
    "name": "榮科",
-   "price": 60.3,
-   "change_pct": 9.84,
+   "price": 59.4,
+   "change_pct": 8.2,
    "score": 3,
    "verdict": "中性偏多",
-   "ma20": 63.71,
+   "ma20": 63.67,
    "stop": 44.99,
    "holding": true,
-   "time": "10:55:50"
+   "time": "11:52:02"
   }
  ]
 }
