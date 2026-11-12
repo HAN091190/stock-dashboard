@@ -3,8 +3,12 @@
  "sent": [
   "1802|▲ 日線黃金交叉月線",
   "2330|▲MACD 翻多",
+  "2330|▼空頭排列（股價 < 月線 < 季線）",
+  "2330|▼跌破月線",
+  "2449|▼盤中急跌",
   "3029|▲ 日線黃金交叉月線",
   "3163|▲MACD 翻多",
+  "3163|▲帶量上漲（量 >  倍均量）",
   "3374|▲MACD 翻多",
   "3491|▲ 日線黃金交叉月線",
   "3491|▲突破  日高點",
@@ -21,6 +25,58 @@
   "8213|▲突破  日高點"
  ],
  "alerts": [
+  {
+   "code": "2330",
+   "name": "台積電",
+   "price": 2335.0,
+   "change_pct": -2.51,
+   "score": -1,
+   "verdict": "中性",
+   "ma20": 2349.75,
+   "stop": 2254.29,
+   "holding": true,
+   "time": "13:26:46",
+   "action": "出場警示",
+   "signals": [
+    "▼空頭排列（股價 < 月線 < 季線）",
+    "▼跌破月線"
+   ],
+   "at": "13:26"
+  },
+  {
+   "code": "2449",
+   "name": "京元電子",
+   "price": 214.5,
+   "change_pct": -7.14,
+   "score": 0,
+   "verdict": "中性",
+   "ma20": 251.22,
+   "stop": 199.71,
+   "holding": true,
+   "time": "13:26:01",
+   "action": "出場警示",
+   "signals": [
+    "▼盤中急跌 -7.14%"
+   ],
+   "at": "13:26"
+  },
+  {
+   "code": "3163",
+   "name": "波若威",
+   "price": 488.0,
+   "change_pct": 1.46,
+   "score": 1,
+   "verdict": "中性",
+   "ma20": 515.45,
+   "stop": 405.0,
+   "holding": true,
+   "time": "13:26:02",
+   "action": "加碼參考",
+   "signals": [
+    "▲帶量上漲（量 > 1.5 倍均量）"
+   ],
+   "at": "13:26"
+  },
   {
    "code": "3029",
    "name": "零壹",
@@ -232,115 +288,115 @@
    "at": "10:15"
   }
  ],
- "updated": "2026-11-12 12:20",
+ "updated": "2026-11-12 13:26",
  "holdings": [
   {
    "code": "0050",
    "name": "元大台灣50",
-   "price": 102.9,
-   "change_pct": 3.21,
-   "score": 1,
+   "price": 100.85,
+   "change_pct": 1.15,
+   "score": 0,
    "verdict": "中性",
-   "ma20": 104.5,
+   "ma20": 104.39,
    "stop": 93.23,
    "holding": true,
-   "time": "12:20:04"
+   "time": "13:26:16"
   },
   {
    "code": "00631L",
    "name": "元大台灣50正2",
-   "price": 32.16,
-   "change_pct": 6.31,
+   "price": 30.99,
+   "change_pct": 2.45,
    "score": 0,
    "verdict": "中性",
-   "ma20": 33.99,
+   "ma20": 33.93,
    "stop": 26.41,
    "holding": true,
-   "time": "12:20:14"
+   "time": "13:26:25"
   },
   {
    "code": "2330",
    "name": "台積電",
-   "price": 2375.0,
-   "change_pct": -0.84,
-   "score": 3,
-   "verdict": "中性偏多",
-   "ma20": 2351.75,
+   "price": 2335.0,
+   "change_pct": -2.51,
+   "score": -1,
+   "verdict": "中性",
+   "ma20": 2349.75,
    "stop": 2254.29,
    "holding": true,
-   "time": "12:20:24"
+   "time": "13:26:46"
   },
   {
    "code": "8358",
    "name": "金居",
-   "price": 390.5,
-   "change_pct": 0.51,
-   "score": 1,
+   "price": 371.0,
+   "change_pct": -4.5,
+   "score": 0,
    "verdict": "中性",
-   "ma20": 412.25,
+   "ma20": 411.27,
    "stop": 319.36,
    "holding": true,
-   "time": "12:20:16"
+   "time": "13:26:37"
   },
   {
    "code": "3163",
    "name": "波若威",
-   "price": 504.0,
-   "change_pct": 4.78,
-   "score": 0,
+   "price": 488.0,
+   "change_pct": 1.46,
+   "score": 1,
    "verdict": "中性",
-   "ma20": 516.25,
+   "ma20": 515.45,
    "stop": 405.0,
    "holding": true,
-   "time": "12:20:04"
+   "time": "13:26:02"
   },
   {
    "code": "2449",
    "name": "京元電子",
-   "price": 223.0,
-   "change_pct": -3.46,
+   "price": 214.5,
+   "change_pct": -7.14,
    "score": 0,
    "verdict": "中性",
-   "ma20": 251.65,
+   "ma20": 251.22,
    "stop": 199.71,
    "holding": true,
-   "time": "12:20:31"
+   "time": "13:26:01"
   },
   {
    "code": "6488",
    "name": "環球晶",
-   "price": 642.0,
-   "change_pct": 1.1,
+   "price": 619.0,
+   "change_pct": -2.52,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 745.4,
+   "ma20": 744.25,
    "stop": 528.71,
    "holding": true,
-   "time": "12:20:01"
+   "time": "13:25:59"
   },
   {
    "code": "2308",
    "name": "台達電",
-   "price": 1275.0,
-   "change_pct": -1.54,
+   "price": 1250.0,
+   "change_pct": -3.47,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 1408.25,
+   "ma20": 1407.0,
    "stop": 1103.57,
    "holding": true,
-   "time": "12:20:00"
+   "time": "13:26:14"
   },
   {
    "code": "4989",
    "name": "榮科",
-   "price": 61.1,
-   "change_pct": 0.33,
+   "price": 58.7,
+   "change_pct": -3.61,
    "score": -1,
    "verdict": "中性",
-   "ma20": 62.83,
+   "ma20": 62.71,
    "stop": 51.29,
    "holding": true,
-   "time": "12:20:37"
+   "time": "13:26:05"
   }
  ]
 }
