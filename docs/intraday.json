@@ -1,25 +1,22 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-20",
  "sent": [
+  "0050|▼盤中急跌",
   "00631L|▼盤中急跌",
   "00631L|▼虧損已達  停損線（）",
-  "1229|▲ 日線黃金交叉月線",
   "1303|▼盤中急跌",
   "1560|▼盤中急跌",
   "2308|▼盤中急跌",
   "2308|▼虧損已達  停損線（）",
   "2449|▼盤中急跌",
+  "2454|▼ 日線死亡交叉月線",
   "2454|▼盤中急跌",
-  "2454|▼空頭排列（股價 < 月線 < 季線）",
-  "2454|▼跌破月線",
   "2492|▼盤中急跌",
   "2492|▼虧損已達  停損線（）",
-  "3163|▼MACD 翻空",
   "3163|▼盤中急跌",
   "3163|▼虧損已達  停損線（）",
   "4989|▼盤中急跌",
   "4989|▼虧損已達  停損線（）",
-  "6416|▲ 日線黃金交叉月線",
   "6488|▼盤中急跌",
   "6488|▼虧損已達  停損線（）",
   "8299|▼盤中急跌",
@@ -29,516 +26,430 @@
  ],
  "alerts": [
   {
-   "code": "00631L",
-   "name": "元大台灣50正2",
-   "price": 24.57,
-   "change_pct": -8.53,
+   "code": "0050",
+   "name": "元大台灣50",
+   "price": 86.0,
+   "change_pct": -8.61,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 31.8,
-   "stop": 21.85,
+   "ma20": 100.49,
+   "stop": 85.62,
    "holding": true,
-   "time": "11:14:04",
-   "return_pct": -23.15,
+   "time": "10:13:59",
+   "return_pct": 30.01,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -8.53%"
+    "▼盤中急跌 -8.61%"
    ],
-   "at": "11:14"
-  },
-  {
-   "code": "2308",
-   "name": "台達電",
-   "price": 992.0,
-   "change_pct": -6.42,
-   "score": -2,
-   "verdict": "偏弱",
-   "ma20": 1273.1,
-   "stop": 847.14,
-   "holding": true,
-   "time": "11:14:00",
-   "return_pct": -44.92,
-   "action": "出場警示",
-   "signals": [
-    "▼盤中急跌 -6.42%"
-   ],
-   "at": "11:14"
-  },
-  {
-   "code": "2454",
-   "name": "聯發科",
-   "price": 3685.0,
-   "change_pct": -6.47,
-   "score": -4,
-   "verdict": "偏弱",
-   "ma20": 3858.0,
-   "stop": 3333.57,
-   "holding": true,
-   "time": "11:14:01",
-   "return_pct": 118.32,
-   "action": "出場警示",
-   "signals": [
-    "▼盤中急跌 -6.47%"
-   ],
-   "at": "11:14"
-  },
-  {
-   "code": "8299",
-   "name": "群聯",
-   "price": 1435.0,
-   "change_pct": -5.59,
-   "score": -2,
-   "verdict": "偏弱",
-   "ma20": 1718.0,
-   "stop": 1237.86,
-   "holding": true,
-   "time": "11:14:28",
-   "return_pct": -32.41,
-   "action": "出場警示",
-   "signals": [
-    "▼盤中急跌 -5.59%"
-   ],
-   "at": "11:14"
+   "at": "10:14"
   },
   {
    "code": "00631L",
    "name": "元大台灣50正2",
-   "price": 25.56,
-   "change_pct": -4.84,
+   "price": 22.35,
+   "change_pct": -16.73,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 31.85,
-   "stop": 21.85,
+   "ma20": 31.2,
+   "stop": 21.72,
    "holding": true,
-   "time": "10:17:59",
-   "return_pct": -20.05,
+   "time": "10:14:24",
+   "return_pct": -30.09,
    "action": "出場警示",
    "signals": [
-    "▼虧損已達 10% 停損線（-20.05%）"
+    "▼盤中急跌 -16.73%",
+    "▼虧損已達 10% 停損線（-30.09%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "1303",
    "name": "南亞",
-   "price": 228.5,
-   "change_pct": -9.86,
+   "price": 206.0,
+   "change_pct": -9.85,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 282.15,
-   "stop": 197.86,
+   "ma20": 277.4,
+   "stop": 172.86,
    "holding": true,
-   "time": "10:18:00",
-   "return_pct": 199.44,
+   "time": "10:14:00",
+   "return_pct": 169.95,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -9.86%"
+    "▼盤中急跌 -9.85%"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "1560",
    "name": "中砂",
-   "price": 581.0,
-   "change_pct": -7.78,
+   "price": 526.0,
+   "change_pct": -9.47,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 756.8,
-   "stop": 503.43,
+   "ma20": 740.8,
+   "stop": 453.43,
    "holding": true,
-   "time": "10:17:59",
-   "return_pct": 29.34,
+   "time": "10:13:54",
+   "return_pct": 17.1,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -7.78%"
+    "▼盤中急跌 -9.47%"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "2308",
    "name": "台達電",
-   "price": 1010.0,
-   "change_pct": -4.72,
+   "price": 903.0,
+   "change_pct": -9.7,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 1274.0,
-   "stop": 847.14,
+   "ma20": 1240.65,
+   "stop": 789.86,
    "holding": true,
-   "time": "10:18:00",
-   "return_pct": -43.92,
+   "time": "10:14:04",
+   "return_pct": -49.86,
    "action": "出場警示",
    "signals": [
-    "▼虧損已達 10% 停損線（-43.92%）"
+    "▼盤中急跌 -9.70%",
+    "▼虧損已達 10% 停損線（-49.86%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "2449",
    "name": "京元電子",
-   "price": 175.0,
-   "change_pct": -9.79,
+   "price": 157.5,
+   "change_pct": -10.0,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 231.38,
-   "stop": 157.43,
+   "ma20": 226.12,
+   "stop": 138.5,
    "holding": true,
-   "time": "10:18:00",
+   "time": "10:14:14",
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -9.79%"
+    "▼盤中急跌 -10.00%"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "2454",
    "name": "聯發科",
-   "price": 3825.0,
-   "change_pct": -2.92,
-   "score": -3,
+   "price": 3450.0,
+   "change_pct": -7.26,
+   "score": -4,
    "verdict": "偏弱",
-   "ma20": 3865.0,
-   "stop": 3333.57,
+   "ma20": 3831.75,
+   "stop": 3092.86,
    "holding": true,
-   "time": "10:18:01",
-   "return_pct": 126.61,
+   "time": "10:14:26",
+   "return_pct": 104.4,
    "action": "出場警示",
    "signals": [
-    "▼空頭排列（股價 < 月線 < 季線）",
-    "▼跌破月線"
+    "▼5 日線死亡交叉月線",
+    "▼盤中急跌 -7.26%"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "2492",
    "name": "華新科",
-   "price": 212.0,
-   "change_pct": -8.23,
+   "price": 187.5,
+   "change_pct": -9.86,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 309.5,
-   "stop": 170.21,
+   "ma20": 300.27,
+   "stop": 149.5,
    "holding": true,
-   "time": "10:18:01",
-   "return_pct": -29.78,
+   "time": "10:13:59",
+   "return_pct": -37.9,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -8.23%",
-    "▼虧損已達 10% 停損線（-29.78%）"
+    "▼盤中急跌 -9.86%",
+    "▼虧損已達 10% 停損線（-37.90%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "3163",
    "name": "波若威",
-   "price": 380.0,
-   "change_pct": -9.95,
+   "price": 342.0,
+   "change_pct": -10.0,
    "score": -3,
    "verdict": "偏弱",
-   "ma20": 479.0,
-   "stop": 336.57,
+   "ma20": 468.5,
+   "stop": 296.0,
    "holding": true,
-   "time": "10:17:54",
-   "return_pct": -41.42,
+   "time": "10:13:52",
+   "return_pct": -47.28,
    "action": "出場警示",
    "signals": [
-    "▼MACD 翻空",
-    "▼盤中急跌 -9.95%",
-    "▼虧損已達 10% 停損線（-41.42%）"
+    "▼盤中急跌 -10.00%",
+    "▼虧損已達 10% 停損線（-47.28%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "4989",
    "name": "榮科",
-   "price": 46.0,
-   "change_pct": -8.91,
+   "price": 40.95,
+   "change_pct": -9.9,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 58.93,
-   "stop": 40.41,
+   "ma20": 57.4,
+   "stop": 35.34,
    "holding": true,
-   "time": "10:17:58",
-   "return_pct": -24.49,
+   "time": "10:13:55",
+   "return_pct": -32.78,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -8.91%",
-    "▼虧損已達 10% 停損線（-24.49%）"
+    "▼盤中急跌 -9.90%",
+    "▼虧損已達 10% 停損線（-32.78%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "6488",
    "name": "環球晶",
-   "price": 503.0,
-   "change_pct": -7.54,
+   "price": 441.5,
+   "change_pct": -9.9,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 662.85,
-   "stop": 433.14,
+   "ma20": 642.98,
+   "stop": 380.86,
    "holding": true,
-   "time": "10:17:57",
-   "return_pct": -30.14,
+   "time": "10:13:56",
+   "return_pct": -38.68,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -7.54%",
-    "▼虧損已達 10% 停損線（-30.14%）"
+    "▼盤中急跌 -9.90%",
+    "▼虧損已達 10% 停損線（-38.68%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "8299",
    "name": "群聯",
-   "price": 1475.0,
-   "change_pct": -2.96,
+   "price": 1365.0,
+   "change_pct": -6.19,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 1720.0,
-   "stop": 1237.86,
+   "ma20": 1693.25,
+   "stop": 1180.71,
    "holding": true,
-   "time": "10:17:57",
-   "return_pct": -30.52,
+   "time": "10:14:08",
+   "return_pct": -35.7,
    "action": "出場警示",
    "signals": [
-    "▼虧損已達 10% 停損線（-30.52%）"
+    "▼盤中急跌 -6.19%",
+    "▼虧損已達 10% 停損線（-35.70%）"
    ],
-   "at": "10:18"
+   "at": "10:14"
   },
   {
    "code": "8358",
    "name": "金居",
-   "price": 274.0,
-   "change_pct": -9.87,
+   "price": 247.0,
+   "change_pct": -9.85,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 373.35,
-   "stop": 231.36,
+   "ma20": 363.77,
+   "stop": 202.5,
    "holding": true,
-   "time": "10:17:54",
-   "return_pct": -40.64,
+   "time": "10:14:03",
+   "return_pct": -46.49,
    "action": "出場警示",
    "signals": [
-    "▼盤中急跌 -9.87%",
-    "▼虧損已達 10% 停損線（-40.64%）"
+    "▼盤中急跌 -9.85%",
+    "▼虧損已達 10% 停損線（-46.49%）"
    ],
-   "at": "10:18"
-  },
-  {
-   "code": "6416",
-   "name": "瑞祺電通",
-   "price": 116.0,
-   "change_pct": -4.13,
-   "score": 5,
-   "verdict": "偏多",
-   "ma20": 112.12,
-   "stop": 106.36,
-   "holding": false,
-   "time": "10:18:00",
-   "action": "進場訊號",
-   "signals": [
-    "▲5 日線黃金交叉月線"
-   ],
-   "at": "10:18"
-  },
-  {
-   "code": "1229",
-   "name": "聯華",
-   "price": 39.7,
-   "change_pct": 0.25,
-   "score": 5,
-   "verdict": "偏多",
-   "ma20": 39.15,
-   "stop": 37.8,
-   "holding": false,
-   "time": "10:17:58",
-   "action": "進場訊號",
-   "signals": [
-    "▲5 日線黃金交叉月線"
-   ],
-   "at": "10:18"
+   "at": "10:14"
   }
  ],
- "updated": "2026-11-19 12:24",
+ "updated": "2026-11-20 10:14",
  "holdings": [
   {
    "code": "0050",
    "name": "元大台灣50",
-   "price": 91.4,
-   "change_pct": -2.77,
-   "score": -3,
+   "price": 86.0,
+   "change_pct": -8.61,
+   "score": -2,
    "verdict": "偏弱",
-   "ma20": 101.46,
-   "stop": 85.74,
+   "ma20": 100.49,
+   "stop": 85.62,
    "holding": true,
-   "time": "12:24:14",
-   "return_pct": 38.17
+   "time": "10:13:59",
+   "return_pct": 30.01
   },
   {
    "code": "00631L",
    "name": "元大台灣50正2",
-   "price": 25.31,
-   "change_pct": -5.77,
+   "price": 22.35,
+   "change_pct": -16.73,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 31.84,
-   "stop": 21.85,
+   "ma20": 31.2,
+   "stop": 21.72,
    "holding": true,
-   "time": "12:23:59",
-   "return_pct": -20.83
+   "time": "10:14:24",
+   "return_pct": -30.09
   },
   {
    "code": "1303",
    "name": "南亞",
-   "price": 228.5,
-   "change_pct": -9.86,
+   "price": 206.0,
+   "change_pct": -9.85,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 282.15,
-   "stop": 197.86,
+   "ma20": 277.4,
+   "stop": 172.86,
    "holding": true,
-   "time": "12:24:00",
-   "return_pct": 199.44
+   "time": "10:14:00",
+   "return_pct": 169.95
   },
   {
    "code": "1560",
    "name": "中砂",
-   "price": 589.0,
-   "change_pct": -6.51,
+   "price": 526.0,
+   "change_pct": -9.47,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 757.2,
-   "stop": 503.43,
+   "ma20": 740.8,
+   "stop": 453.43,
    "holding": true,
-   "time": "12:23:57",
-   "return_pct": 31.12
+   "time": "10:13:54",
+   "return_pct": 17.1
   },
   {
    "code": "2308",
    "name": "台達電",
-   "price": 1025.0,
-   "change_pct": -3.3,
+   "price": 903.0,
+   "change_pct": -9.7,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 1274.75,
-   "stop": 847.14,
+   "ma20": 1240.65,
+   "stop": 789.86,
    "holding": true,
-   "time": "12:24:10",
-   "return_pct": -43.08
+   "time": "10:14:04",
+   "return_pct": -49.86
   },
   {
    "code": "2330",
    "name": "台積電",
-   "price": 2135.0,
-   "change_pct": -1.84,
+   "price": 2025.0,
+   "change_pct": -3.57,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 2297.0,
-   "stop": 1993.57,
+   "ma20": 2277.25,
+   "stop": 1911.43,
    "holding": true,
-   "time": "12:24:00",
-   "return_pct": 14.37
+   "time": "10:14:05",
+   "return_pct": 8.47
   },
   {
    "code": "2449",
    "name": "京元電子",
-   "price": 175.0,
-   "change_pct": -9.79,
+   "price": 157.5,
+   "change_pct": -10.0,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 231.38,
-   "stop": 157.43,
+   "ma20": 226.12,
+   "stop": 138.5,
    "holding": true,
-   "time": "12:24:00"
+   "time": "10:14:14"
   },
   {
    "code": "2454",
    "name": "聯發科",
-   "price": 3810.0,
-   "change_pct": -3.3,
-   "score": -3,
+   "price": 3450.0,
+   "change_pct": -7.26,
+   "score": -4,
    "verdict": "偏弱",
-   "ma20": 3864.25,
-   "stop": 3333.57,
+   "ma20": 3831.75,
+   "stop": 3092.86,
    "holding": true,
-   "time": "12:24:06",
-   "return_pct": 125.72
+   "time": "10:14:26",
+   "return_pct": 104.4
   },
   {
    "code": "2492",
    "name": "華新科",
-   "price": 210.0,
-   "change_pct": -9.09,
+   "price": 187.5,
+   "change_pct": -9.86,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 309.4,
-   "stop": 170.21,
+   "ma20": 300.27,
+   "stop": 149.5,
    "holding": true,
-   "time": "12:24:01",
-   "return_pct": -30.45
+   "time": "10:13:59",
+   "return_pct": -37.9
   },
   {
    "code": "3163",
    "name": "波若威",
-   "price": 380.0,
-   "change_pct": -9.95,
+   "price": 342.0,
+   "change_pct": -10.0,
    "score": -3,
    "verdict": "偏弱",
-   "ma20": 479.0,
-   "stop": 336.57,
+   "ma20": 468.5,
+   "stop": 296.0,
    "holding": true,
-   "time": "12:23:08",
-   "return_pct": -41.42
+   "time": "10:13:52",
+   "return_pct": -47.28
   },
   {
    "code": "4989",
    "name": "榮科",
-   "price": 45.5,
+   "price": 40.95,
    "change_pct": -9.9,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 58.9,
-   "stop": 40.41,
+   "ma20": 57.4,
+   "stop": 35.34,
    "holding": true,
-   "time": "12:24:02",
-   "return_pct": -25.31
+   "time": "10:13:55",
+   "return_pct": -32.78
   },
   {
    "code": "6488",
    "name": "環球晶",
-   "price": 493.5,
-   "change_pct": -9.28,
+   "price": 441.5,
+   "change_pct": -9.9,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 662.38,
-   "stop": 433.14,
+   "ma20": 642.98,
+   "stop": 380.86,
    "holding": true,
-   "time": "12:23:56",
-   "return_pct": -31.46
+   "time": "10:13:56",
+   "return_pct": -38.68
   },
   {
    "code": "8299",
    "name": "群聯",
-   "price": 1490.0,
-   "change_pct": -1.97,
+   "price": 1365.0,
+   "change_pct": -6.19,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 1720.75,
-   "stop": 1237.86,
+   "ma20": 1693.25,
+   "stop": 1180.71,
    "holding": true,
-   "time": "12:23:58",
-   "return_pct": -29.82
+   "time": "10:14:08",
+   "return_pct": -35.7
   },
   {
    "code": "8358",
    "name": "金居",
-   "price": 274.0,
-   "change_pct": -9.87,
+   "price": 247.0,
+   "change_pct": -9.85,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 373.35,
-   "stop": 231.36,
+   "ma20": 363.77,
+   "stop": 202.5,
    "holding": true,
-   "time": "12:23:55",
-   "return_pct": -40.64
+   "time": "10:14:03",
+   "return_pct": -46.49
   }
  ]
 }
