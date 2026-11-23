@@ -1,19 +1,18 @@
 {
- "updated": "2026-11-20 16:35",
- "scanned": 398,
+ "updated": "2026-11-23 16:54",
+ "scanned": 399,
  "market": {
-  "close": 36033.29,
-  "change_pct": -6.23,
-  "ma20": 42719.57,
-  "ma60": 45710.92,
-  "rsi": 25.6,
+  "close": 36811.89,
+  "change_pct": 2.16,
+  "ma20": 42258.09,
+  "ma60": 45578.41,
+  "rsi": 29.5,
   "verdict": "偏弱",
   "bull": [],
   "bear": [
    "空頭排列（股價 < 月線 < 季線）"
   ],
   "spark": [
-   44762.32,
    45169.46,
    45832.62,
    45975.22,
@@ -72,29 +71,30 @@
    40092.11,
    40194.91,
    38426.89,
-   36033.29
+   36033.29,
+   36811.89
   ]
  },
  "holdings": [
   {
-   "date": "2026-11-20",
-   "close": 84.45,
-   "change_pct": -10.26,
-   "ma20": 100.41,
-   "ma60": 106.62,
-   "rsi": 25.9,
-   "k": 34.4,
-   "d": 47.9,
-   "stop": 75.01,
-   "score": -2,
-   "verdict": "偏弱",
-   "bull": [],
+   "date": "2026-11-23",
+   "close": 87.0,
+   "change_pct": 3.02,
+   "ma20": 98.58,
+   "ma60": 106.1,
+   "rsi": 31.0,
+   "k": 21.5,
+   "d": 33.7,
+   "stop": 77.66,
+   "score": -1,
+   "verdict": "中性",
+   "bull": [
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    103.8,
-    104.4,
     105.9,
     106.05,
     106.95,
@@ -152,32 +152,34 @@
     96.45,
     94.0,
     94.1,
-    84.45
+    90.2,
+    84.45,
+    87.0
    ],
    "code": "0050",
    "name": "元大台灣50",
-   "return_pct": 27.66
+   "return_pct": 31.52
   },
   {
-   "date": "2026-11-20",
-   "close": 21.24,
-   "change_pct": -20.86,
-   "ma20": 31.14,
-   "ma60": 35.46,
-   "rsi": 25.4,
-   "k": 30.0,
-   "d": 42.3,
-   "stop": 15.6,
-   "score": -2,
-   "verdict": "偏弱",
-   "bull": [],
+   "date": "2026-11-23",
+   "close": 22.5,
+   "change_pct": 5.93,
+   "ma20": 29.94,
+   "ma60": 35.1,
+   "rsi": 29.6,
+   "k": 17.9,
+   "d": 29.3,
+   "stop": 17.03,
+   "score": -1,
+   "verdict": "中性",
+   "bull": [
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）",
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    34.11,
-    34.68,
     35.71,
     35.95,
     36.3,
@@ -235,30 +237,29 @@
     27.95,
     26.86,
     26.84,
-    21.24
+    24.57,
+    21.24,
+    22.5
    ],
    "code": "00631L",
    "name": "元大台灣50正2",
-   "return_pct": -33.56
+   "return_pct": -29.62
   },
   {
-   "date": "2026-11-20",
-   "close": 206.0,
-   "change_pct": -9.85,
-   "ma20": 277.4,
-   "ma60": 264.27,
-   "rsi": 34.9,
-   "k": 19.9,
-   "d": 36.1,
-   "stop": 151.07,
-   "score": -2,
-   "verdict": "偏弱",
+   "date": "2026-11-23",
+   "close": 226.5,
+   "change_pct": 9.95,
+   "ma20": 273.68,
+   "ma60": 264.9,
+   "rsi": 40.5,
+   "k": 21.1,
+   "d": 31.1,
+   "stop": 171.5,
+   "score": 0,
+   "verdict": "中性",
    "bull": [],
-   "bear": [
-    "5 日線死亡交叉月線"
-   ],
+   "bear": [],
    "spark": [
-    188.5,
     207.0,
     227.5,
     220.5,
@@ -317,22 +318,23 @@
     261.5,
     253.5,
     228.5,
-    206.0
+    206.0,
+    226.5
    ],
    "code": "1303",
    "name": "南亞",
-   "return_pct": 169.95
+   "return_pct": 196.82
   },
   {
-   "date": "2026-11-20",
-   "close": 523.0,
-   "change_pct": -9.98,
-   "ma20": 740.65,
-   "ma60": 811.35,
-   "rsi": 26.3,
-   "k": 8.5,
-   "d": 15.8,
-   "stop": 393.86,
+   "date": "2026-11-23",
+   "close": 553.0,
+   "change_pct": 5.74,
+   "ma20": 726.0,
+   "ma60": 809.28,
+   "rsi": 30.8,
+   "k": 13.7,
+   "d": 15.1,
+   "stop": 424.29,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
@@ -340,7 +342,6 @@
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    677.0,
     682.0,
     690.0,
     695.0,
@@ -399,32 +400,33 @@
     615.0,
     630.0,
     581.0,
-    523.0
+    523.0,
+    553.0
    ],
    "code": "1560",
    "name": "中砂",
-   "return_pct": 16.43
+   "return_pct": 23.11
   },
   {
-   "date": "2026-11-20",
-   "close": 900.0,
-   "change_pct": -10.0,
-   "ma20": 1240.5,
-   "ma60": 1605.33,
-   "rsi": 24.0,
-   "k": 13.7,
-   "d": 25.3,
-   "stop": 691.29,
-   "score": -2,
-   "verdict": "偏弱",
-   "bull": [],
+   "date": "2026-11-23",
+   "close": 990.0,
+   "change_pct": 10.0,
+   "ma20": 1212.0,
+   "ma60": 1593.33,
+   "rsi": 31.8,
+   "k": 18.1,
+   "d": 22.9,
+   "stop": 776.14,
+   "score": -1,
+   "verdict": "中性",
+   "bull": [
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）",
-    "RSI 24 超賣（留意止跌訊號）",
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    1710.0,
     1750.0,
     1770.0,
     1830.0,
@@ -483,30 +485,32 @@
     1055.0,
     1060.0,
     1000.0,
-    900.0
+    900.0,
+    990.0
    ],
    "code": "2308",
    "name": "台達電",
-   "return_pct": -50.02
+   "return_pct": -45.03
   },
   {
-   "date": "2026-11-20",
-   "close": 2000.0,
-   "change_pct": -4.76,
-   "ma20": 2276.0,
-   "ma60": 2394.42,
-   "rsi": 27.8,
-   "k": 26.8,
-   "d": 42.7,
-   "stop": 1801.43,
-   "score": -2,
-   "verdict": "偏弱",
-   "bull": [],
+   "date": "2026-11-23",
+   "close": 2030.0,
+   "change_pct": 1.5,
+   "ma20": 2258.25,
+   "ma60": 2388.25,
+   "rsi": 31.0,
+   "k": 22.6,
+   "d": 36.0,
+   "stop": 1827.86,
+   "score": -1,
+   "verdict": "中性",
+   "bull": [
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    2400.0,
     2415.0,
     2410.0,
     2420.0,
@@ -565,22 +569,23 @@
     2170.0,
     2175.0,
     2100.0,
-    2000.0
+    2000.0,
+    2030.0
    ],
    "code": "2330",
    "name": "台積電",
-   "return_pct": 7.13
+   "return_pct": 8.74
   },
   {
-   "date": "2026-11-20",
-   "close": 157.5,
-   "change_pct": -10.0,
-   "ma20": 226.12,
-   "ma60": 260.96,
+   "date": "2026-11-23",
+   "close": 157.0,
+   "change_pct": -0.32,
+   "ma20": 220.85,
+   "ma60": 259.58,
    "rsi": 27.9,
-   "k": 9.2,
-   "d": 14.5,
-   "stop": 121.0,
+   "k": 10.2,
+   "d": 13.1,
+   "stop": 120.64,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
@@ -588,7 +593,6 @@
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    239.5,
     244.0,
     247.5,
     270.0,
@@ -647,31 +651,32 @@
     176.5,
     194.0,
     175.0,
-    157.5
+    157.5,
+    157.0
    ],
    "code": "2449",
    "name": "京元電子"
   },
   {
-   "date": "2026-11-20",
-   "close": 3350.0,
-   "change_pct": -9.95,
-   "ma20": 3826.75,
-   "ma60": 4300.67,
-   "rsi": 36.4,
-   "k": 38.5,
-   "d": 54.4,
-   "stop": 2710.0,
-   "score": -5,
+   "date": "2026-11-23",
+   "close": 3685.0,
+   "change_pct": 10.0,
+   "ma20": 3810.5,
+   "ma60": 4299.83,
+   "rsi": 44.8,
+   "k": 38.3,
+   "d": 49.0,
+   "stop": 3040.71,
+   "score": -2,
    "verdict": "偏弱",
-   "bull": [],
+   "bull": [
+    "MACD 翻多"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）",
-    "5 日線死亡交叉月線",
-    "MACD 翻空"
+    "5 日線死亡交叉月線"
    ],
    "spark": [
-    3735.0,
     3945.0,
     3865.0,
     3985.0,
@@ -730,22 +735,23 @@
     3840.0,
     3940.0,
     3720.0,
-    3350.0
+    3350.0,
+    3685.0
    ],
    "code": "2454",
    "name": "聯發科",
-   "return_pct": 98.47
+   "return_pct": 118.32
   },
   {
-   "date": "2026-11-20",
-   "close": 187.5,
-   "change_pct": -9.86,
-   "ma20": 300.27,
-   "ma60": 323.43,
-   "rsi": 27.7,
-   "k": 5.4,
-   "d": 9.9,
-   "stop": 129.79,
+   "date": "2026-11-23",
+   "close": 193.0,
+   "change_pct": 2.93,
+   "ma20": 291.52,
+   "ma60": 322.18,
+   "rsi": 29.3,
+   "k": 8.7,
+   "d": 9.5,
+   "stop": 137.86,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
@@ -754,7 +760,6 @@
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    268.0,
     269.5,
     285.0,
     313.5,
@@ -813,22 +818,23 @@
     232.0,
     231.0,
     208.0,
-    187.5
+    187.5,
+    193.0
    ],
    "code": "2492",
    "name": "華新科",
-   "return_pct": -37.9
+   "return_pct": -36.08
   },
   {
-   "date": "2026-11-20",
-   "close": 342.0,
-   "change_pct": -10.0,
-   "ma20": 468.5,
-   "ma60": 609.93,
-   "rsi": 27.8,
-   "k": 17.6,
-   "d": 31.9,
-   "stop": 257.0,
+   "date": "2026-11-23",
+   "close": 322.0,
+   "change_pct": -5.85,
+   "ma20": 457.0,
+   "ma60": 602.47,
+   "rsi": 26.3,
+   "k": 13.9,
+   "d": 25.9,
+   "stop": 239.21,
    "score": -3,
    "verdict": "偏弱",
    "bull": [],
@@ -838,7 +844,6 @@
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    770.0,
     777.0,
     776.0,
     754.0,
@@ -897,22 +902,23 @@
     414.0,
     422.0,
     380.0,
-    342.0
+    342.0,
+    322.0
    ],
    "code": "3163",
    "name": "波若威",
-   "return_pct": -47.28
+   "return_pct": -50.36
   },
   {
-   "date": "2026-11-20",
-   "close": 40.95,
-   "change_pct": -9.9,
-   "ma20": 57.4,
-   "ma60": 62.01,
-   "rsi": 28.6,
-   "k": 14.9,
-   "d": 27.6,
-   "stop": 30.91,
+   "date": "2026-11-23",
+   "close": 41.0,
+   "change_pct": 0.12,
+   "ma20": 55.9,
+   "ma60": 61.68,
+   "rsi": 28.7,
+   "k": 14.7,
+   "d": 23.3,
+   "stop": 31.22,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
@@ -921,7 +927,6 @@
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    60.9,
     66.9,
     66.3,
     68.2,
@@ -980,32 +985,31 @@
     51.1,
     50.5,
     45.45,
-    40.95
+    40.95,
+    41.0
    ],
    "code": "4989",
    "name": "榮科",
-   "return_pct": -32.78
+   "return_pct": -32.7
   },
   {
-   "date": "2026-11-20",
-   "close": 441.5,
-   "change_pct": -9.9,
-   "ma20": 642.98,
-   "ma60": 866.64,
-   "rsi": 24.6,
-   "k": 13.6,
-   "d": 22.9,
-   "stop": 330.93,
+   "date": "2026-11-23",
+   "close": 460.5,
+   "change_pct": 4.3,
+   "ma20": 624.7,
+   "ma60": 857.98,
+   "rsi": 27.5,
+   "k": 15.7,
+   "d": 20.5,
+   "stop": 352.14,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）",
-    "RSI 25 超賣（留意止跌訊號）",
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    980.0,
     949.0,
     958.0,
     972.0,
@@ -1064,22 +1068,23 @@
     546.0,
     544.0,
     490.0,
-    441.5
+    441.5,
+    460.5
    ],
    "code": "6488",
    "name": "環球晶",
-   "return_pct": -38.68
+   "return_pct": -36.04
   },
   {
-   "date": "2026-11-20",
-   "close": 1320.0,
-   "change_pct": -9.28,
-   "ma20": 1691.0,
-   "ma60": 1927.25,
-   "rsi": 27.6,
-   "k": 19.0,
-   "d": 29.3,
-   "stop": 1042.86,
+   "date": "2026-11-23",
+   "close": 1450.0,
+   "change_pct": 9.85,
+   "ma20": 1669.5,
+   "ma60": 1916.67,
+   "rsi": 37.1,
+   "k": 25.2,
+   "d": 28.0,
+   "stop": 1172.14,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
@@ -1088,7 +1093,6 @@
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    2085.0,
     2125.0,
     2155.0,
     2150.0,
@@ -1147,21 +1151,22 @@
     1535.0,
     1520.0,
     1455.0,
-    1320.0
+    1320.0,
+    1450.0
    ],
    "code": "8299",
    "name": "群聯",
-   "return_pct": -37.82
+   "return_pct": -31.7
   },
   {
-   "date": "2026-11-20",
-   "close": 247.0,
-   "change_pct": -9.85,
-   "ma20": 363.77,
-   "ma60": 455.38,
-   "rsi": 28.4,
-   "k": 12.1,
-   "d": 23.1,
+   "date": "2026-11-23",
+   "close": 243.5,
+   "change_pct": -1.42,
+   "ma20": 354.02,
+   "ma60": 452.28,
+   "rsi": 28.0,
+   "k": 11.8,
+   "d": 19.3,
    "stop": 174.86,
    "score": -2,
    "verdict": "偏弱",
@@ -1171,7 +1176,6 @@
     "虧損已達 10% 停損線"
    ],
    "spark": [
-    429.0,
     449.5,
     494.0,
     543.0,
@@ -1230,33 +1234,120 @@
     319.5,
     304.0,
     274.0,
-    247.0
+    247.0,
+    243.5
    ],
    "code": "8358",
    "name": "金居",
-   "return_pct": -46.49
+   "return_pct": -47.25
   }
  ],
- "picks": [],
+ "picks": [
+  {
+   "date": "2026-11-23",
+   "close": 111.0,
+   "change_pct": 9.9,
+   "ma20": 108.11,
+   "ma60": 80.61,
+   "rsi": 56.3,
+   "k": 44.5,
+   "d": 34.0,
+   "stop": 84.99,
+   "score": 6,
+   "verdict": "偏多",
+   "bull": [
+    "多頭排列（股價 > 月線 > 季線）",
+    "KD 低檔黃金交叉",
+    "RSI 56 健康區間",
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
+   "bear": [],
+   "spark": [
+    50.2,
+    50.3,
+    50.9,
+    49.6,
+    50.9,
+    50.6,
+    50.0,
+    50.0,
+    49.85,
+    49.5,
+    49.25,
+    49.25,
+    50.2,
+    55.2,
+    60.7,
+    57.8,
+    56.7,
+    59.9,
+    57.8,
+    56.4,
+    62.0,
+    68.2,
+    75.0,
+    73.8,
+    72.1,
+    68.5,
+    69.2,
+    71.5,
+    71.2,
+    71.3,
+    78.4,
+    78.9,
+    74.9,
+    82.3,
+    90.5,
+    93.4,
+    102.5,
+    112.5,
+    101.5,
+    101.5,
+    111.5,
+    122.5,
+    127.0,
+    126.0,
+    113.5,
+    102.5,
+    112.5,
+    109.5,
+    105.0,
+    103.0,
+    99.4,
+    104.5,
+    97.2,
+    106.5,
+    117.0,
+    105.5,
+    95.0,
+    92.1,
+    101.0,
+    111.0
+   ],
+   "code": "6925",
+   "name": "意藍"
+  }
+ ],
  "watchlist": [
   {
-   "date": "2026-11-20",
-   "close": 2000.0,
-   "change_pct": -4.76,
-   "ma20": 2276.0,
-   "ma60": 2394.42,
-   "rsi": 27.8,
-   "k": 26.8,
-   "d": 42.7,
-   "stop": 1801.43,
-   "score": -2,
-   "verdict": "偏弱",
-   "bull": [],
+   "date": "2026-11-23",
+   "close": 2030.0,
+   "change_pct": 1.5,
+   "ma20": 2258.25,
+   "ma60": 2388.25,
+   "rsi": 31.0,
+   "k": 22.6,
+   "d": 36.0,
+   "stop": 1827.86,
+   "score": -1,
+   "verdict": "中性",
+   "bull": [
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    2400.0,
     2415.0,
     2410.0,
     2420.0,
@@ -1315,21 +1406,22 @@
     2170.0,
     2175.0,
     2100.0,
-    2000.0
+    2000.0,
+    2030.0
    ],
    "code": "2330",
    "name": "台積電"
   },
   {
-   "date": "2026-11-20",
-   "close": 210.0,
-   "change_pct": -4.76,
-   "ma20": 236.3,
-   "ma60": 244.97,
-   "rsi": 30.3,
-   "k": 20.9,
-   "d": 33.5,
-   "stop": 186.5,
+   "date": "2026-11-23",
+   "close": 206.0,
+   "change_pct": -1.9,
+   "ma20": 234.35,
+   "ma60": 244.35,
+   "rsi": 28.6,
+   "k": 14.8,
+   "d": 27.3,
+   "stop": 182.21,
    "score": -2,
    "verdict": "偏弱",
    "bull": [],
@@ -1337,7 +1429,6 @@
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    243.0,
     246.5,
     252.0,
     253.0,
@@ -1396,31 +1487,32 @@
     219.0,
     221.0,
     220.5,
-    210.0
+    210.0,
+    206.0
    ],
    "code": "2317",
    "name": "鴻海"
   },
   {
-   "date": "2026-11-20",
-   "close": 3350.0,
-   "change_pct": -9.95,
-   "ma20": 3826.75,
-   "ma60": 4300.67,
-   "rsi": 36.4,
-   "k": 38.5,
-   "d": 54.4,
-   "stop": 2710.0,
-   "score": -5,
+   "date": "2026-11-23",
+   "close": 3685.0,
+   "change_pct": 10.0,
+   "ma20": 3810.5,
+   "ma60": 4299.83,
+   "rsi": 44.8,
+   "k": 38.3,
+   "d": 49.0,
+   "stop": 3040.71,
+   "score": -2,
    "verdict": "偏弱",
-   "bull": [],
+   "bull": [
+    "MACD 翻多"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）",
-    "5 日線死亡交叉月線",
-    "MACD 翻空"
+    "5 日線死亡交叉月線"
    ],
    "spark": [
-    3735.0,
     3945.0,
     3865.0,
     3985.0,
@@ -1479,30 +1571,31 @@
     3840.0,
     3940.0,
     3720.0,
-    3350.0
+    3350.0,
+    3685.0
    ],
    "code": "2454",
    "name": "聯發科"
   },
   {
-   "date": "2026-11-20",
-   "close": 84.45,
-   "change_pct": -10.26,
-   "ma20": 100.41,
-   "ma60": 106.62,
-   "rsi": 25.9,
-   "k": 34.4,
-   "d": 47.9,
-   "stop": 75.01,
-   "score": -2,
-   "verdict": "偏弱",
-   "bull": [],
+   "date": "2026-11-23",
+   "close": 87.0,
+   "change_pct": 3.02,
+   "ma20": 98.58,
+   "ma60": 106.1,
+   "rsi": 31.0,
+   "k": 21.5,
+   "d": 33.7,
+   "stop": 77.66,
+   "score": -1,
+   "verdict": "中性",
+   "bull": [
+    "帶量上漲（量 > 1.5 倍均量）"
+   ],
    "bear": [
     "空頭排列（股價 < 月線 < 季線）"
    ],
    "spark": [
-    103.8,
-    104.4,
     105.9,
     106.05,
     106.95,
@@ -1560,7 +1653,9 @@
     96.45,
     94.0,
     94.1,
-    84.45
+    90.2,
+    84.45,
+    87.0
    ],
    "code": "0050",
    "name": "元大台灣50"
@@ -1569,99 +1664,99 @@
  "global": [
   {
    "name": "美國 10 年期公債殖利率",
-   "value": 5.052,
+   "value": 4.912,
    "kind": "yield",
-   "date": "11/19",
-   "chg": -1.4,
-   "chg5": -5.1
+   "date": "11/20",
+   "chg": -14.0,
+   "chg5": -24.2
   },
   {
    "name": "美國 5 年期公債殖利率",
-   "value": 4.866,
+   "value": 4.701,
    "kind": "yield",
-   "date": "11/19",
-   "chg": -1.8,
-   "chg5": -7.9
+   "date": "11/20",
+   "chg": -16.5,
+   "chg5": -28.0
   },
   {
    "name": "美國 3 個月國庫券殖利率",
-   "value": 4.147,
+   "value": 4.122,
    "kind": "yield",
-   "date": "11/19",
-   "chg": 0.2,
-   "chg5": 1.9
+   "date": "11/20",
+   "chg": -2.5,
+   "chg5": 0.0
   },
   {
    "name": "WTI 原油",
-   "value": 82.08,
+   "value": 82.92,
    "kind": "price",
-   "date": "11/20",
-   "chg": -1.36,
-   "chg5": -7.32
+   "date": "11/23",
+   "chg": -1.26,
+   "chg5": -3.27
   },
   {
    "name": "布蘭特原油",
-   "value": 89.09,
+   "value": 89.45,
    "kind": "price",
-   "date": "11/20",
-   "chg": -3.14,
-   "chg5": -7.04
+   "date": "11/23",
+   "chg": -3.37,
+   "chg5": -3.23
   },
   {
    "name": "黃金",
-   "value": 3582.1,
+   "value": 3611.7,
    "kind": "price",
-   "date": "11/20",
-   "chg": -2.81,
-   "chg5": -7.83
+   "date": "11/23",
+   "chg": 2.74,
+   "chg5": -6.26
   },
   {
    "name": "美元指數",
-   "value": 103.8,
+   "value": 103.64,
    "kind": "price",
-   "date": "11/20",
-   "chg": -0.09,
-   "chg5": 0.38
+   "date": "11/23",
+   "chg": -0.17,
+   "chg5": 0.08
   },
   {
    "name": "美元 / 台幣",
-   "value": 32.97,
+   "value": 32.87,
    "kind": "price",
-   "date": "11/20",
-   "chg": 0.12,
-   "chg5": 0.09
+   "date": "11/23",
+   "chg": -0.48,
+   "chg5": -0.02
   },
   {
    "name": "VIX 恐慌指數",
-   "value": 28.5,
+   "value": 31.32,
    "kind": "price",
-   "date": "11/20",
-   "chg": 0.21,
-   "chg5": 47.67
+   "date": "11/23",
+   "chg": -12.73,
+   "chg5": 36.71
   },
   {
    "name": "標普 500",
-   "value": 7175.83,
+   "value": 6910.39,
    "kind": "price",
-   "date": "11/19",
-   "chg": -2.02,
-   "chg5": -5.49
+   "date": "11/20",
+   "chg": -3.7,
+   "chg5": -8.61
   },
   {
    "name": "那斯達克",
-   "value": 23879.2,
+   "value": 22617.73,
    "kind": "price",
-   "date": "11/19",
-   "chg": -2.25,
-   "chg5": -5.86
+   "date": "11/20",
+   "chg": -5.28,
+   "chg5": -10.02
   },
   {
    "name": "費城半導體",
-   "value": 9419.72,
+   "value": 8408.59,
    "kind": "price",
-   "date": "11/19",
-   "chg": -2.41,
-   "chg5": -10.35
+   "date": "11/20",
+   "chg": -10.73,
+   "chg5": -17.13
   }
  ],
  "us_macro": [
@@ -1925,43 +2020,84 @@
  ],
  "news": [
   {
+   "topic": "川普 / 關稅 / 美國政策",
+   "items": [
+    {
+     "title": "川普嗆只買中方「老舊晶片」！陸外交部冷回：立場早已表明",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9vNjFOLURwSUJvV0NFaS13Y0I3R245ZjJTQ3VNZzZKUlB3MVllb0szd0p5S05EMWNLQWdrb1U3MFRjSTRzZVpBTnRjdDVua1k1cXhN?oc=5",
+     "source": "中天新聞網",
+     "time": "11/23 16:29"
+    },
+    {
+     "title": "輝達面臨多重監管調查 投資人示警接班人將迎AI重組挑戰",
+     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE13aUdXTnlsUEp0LXFFUlZnMnZtbm5Hc2MySTJRT201NjlWVVl3UTRRdVFPX0dtd3NoT3c2ZHZEeDNQWi1QMHpGREZwYWlBQkt2UWUxSEpLT2JwbWZsWUtzbFc5RHRJNExlX29rVDIwaw?oc=5",
+     "source": "理財周刊",
+     "time": "11/23 15:18"
+    },
+    {
+     "title": "川普將美股重挫歸咎民主黨！稱市值蒸發逾6兆美元、貝森特點多重因素",
+     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGRGVyNDV5MlFINzZXbGpNTnpKM0NqSFRRSjF3UzFLQkxsbjhrQ0lBZUVtbXVrakhha3ZPVjNYR29yRnltUUwwS1BucktVMVE?oc=5",
+     "source": "鉅亨網",
+     "time": "11/23 15:10"
+    },
+    {
+     "title": "美股持續大跌，市值已蒸發超6兆美元，川普：100%怪民主黨",
+     "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1rdHVpSDdyNWV6Ym5iZlBxMkJHVWxxdDY4TUtMNzZ2Zm1ZNmlYTnVRTkoxbnAxb0t5amVMNE42TlJDYTNPZlY0UA?oc=5",
+     "source": "鉅亨號",
+     "time": "11/23 14:30"
+    },
+    {
+     "title": "川普再次力挺黃仁勳 籲輝達董事會重新聘回任執行長",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rYVhVNS1GeTViUWFnbmZqeVA2TGVfeFZkbTJvSUdBV0toM2Mta1Z2Y1VWb3dQMDhtRUdfXzFya3RPLVRDYWlhWlJjNDdhY1p5SlJiTlpiVDQ?oc=5",
+     "source": "Rti 中央廣播電臺",
+     "time": "11/23 14:25"
+    },
+    {
+     "title": "【即時新聞】最新！川普籲輝達(NVDA)重聘黃仁勳，晶片銷中調查發酵，股價年跌34%要反轉了？",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOU1NjanVlMmFidERrX1VER2wwY2xTS1RhSFJxTXJtUFFxbEg3M2JoUjhmcTE4WW1OVk5QUUUwb3E4SmJuZk5uSmxDM3NyMTlQc2Z2amw4VDFsLWk0TmUwNDNKZ29FUm1DWDdiVUpGRER1WkRybFdmLWZCRko0UlBjam1DVFJDX1cyRTNBM1pPa3Q?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 13:54"
+    }
+   ]
+  },
+  {
    "topic": "美國總經：CPI、非農、聯準會",
    "items": [
     {
-     "title": "國際金價快跌破3500美元 專家仍喊可長期持有 | 太報",
-     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1BMEFXWlFGNjM0OWNFOVR6N3FEWGYyaHRXdUZjVldrY2ZZY0RWY2FaMFg5dS05dDZYeDlxZENzYkNoWEVOdlZyT05zWlZqX3FxTGJzVnN3?oc=5",
-     "source": "LINE TODAY",
-     "time": "11/20 15:06"
+     "title": "美國聯準會和台灣央行利率動向 永豐金這麼看",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1MUzRtYk1aRVpxWW9rcFM1SU1DcTVxN3o1eENUQlNYbklSSDJfVWhXaGhCUFVIcVY4SjFCQ05LajVnTi12aFJCdm9HQXR3NkF2TXpFV1p4UGI2dHVCWk9nZkM5UzlXYkRUOHk4aWRJREV0enR4bVU5VU1mUzDSAV9BVV95cUxObFVLVW1ReHdkWUpJZnUwZGppZnRySjByWS13YlRqS1VoaEZ2c21uTTQwRThnLWJiUW9rVFVnUHFwSkFGaHBORFdGbTQ0amFyaFF4VllvN211MlVuZkdZaw?oc=5",
+     "source": "經濟日報",
+     "time": "11/23 15:22"
     },
     {
-     "title": "儘管聯準會展望偏鷹，美元仍走弱，瑞士法郎持穩",
-     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPYU85UEVYdE81ZkZVV0tpY210NHJQRk1GbWpyeGhDYWdENUQzTllUaTd5M0xPakwwRUlTOHZ0SG9feG1manZ2UFpSV3hVcHIyaFd5THNMNUZGWUFyT0M4QXAwdGNOdHdmWUdBWUVBa24yZVdrWW1ySm9yS3lqODJKOElPNDdmeW9HM2tZVm1yM1NiQVMtVE1hZ093R2NNdEhhcEdzUmlTTzFuUmYxUkpWdHVEQ19QV2d0cXNiMEdXdThickNHbmRmYzFhZWhlZllhUU40SWVRMnM3Y1dz?oc=5",
-     "source": "www.tmgm.com",
-     "time": "11/20 14:53"
+     "title": "【即時新聞】花旗(C)驚傳350億美元計價烏龍！聯準會監管解禁恐受阻，小心這檔拉回",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMHcwTzZzRV9PREhpVXQycFpkQXJ6YllER2xmQnJMLUlsS2dhdWhwdVgxOGJkeTlTaU5yOXF1RW5BMHRfR2d3cU5adlpuYVFybEFIY2d3bVJKbkRjcXVvYVFzU0FrRWtINHVlU00wZjNKZWkzRjM4NlhPVldkZ2QwNDVuOUFSMENNbzJSTlJtMVc?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 15:07"
     },
     {
-     "title": "《匯市短評》一周展望：美國PCE、PMI初值與科技股動盪成焦點",
-     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB3Q04tblNzZUxaWnNuRFluZE10MWNGNW0xNnJEejFlWDl6Zm9ickczVWJYWEN6cXFpV3pXVWRhQmR4d09RZVZYRTdxRVBlejJkZFl0ZHdoekZhY01BaGl3UVV4YjZTQ1NVMEZHYUFwSzlnRmk1c1JR?oc=5",
-     "source": "TradingView",
-     "time": "11/20 14:24"
+     "title": "美元/加元價格預測：走軟至1.4300附近，但在100日SMA上方保持看漲結構",
+     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxONHR3ek94RkJ5WG5zT19rOG9tZklqOEs2WFpBbFFIOE52UWx6ckJodUV5RlJHMlNhVTN2enI0bzZiV3EtUTBkUUFXdlhodnBNaVJ0VGxhVENfa3dSOWk4SHg5Z0pfbHZNNUdxbzYyeFZvWmJxU2Z4YzFiRjdPVjlJZ2Q3Y2R6VGNiM01GVUJWUUg3aEZ1b0EtcV8tUDRhNDdRWGxVcjF2MVhCSm9NUG96bWdieEtIc2RzbkYzV0Z2M3RVWnlsT29obG5PVlZUNGYyN1RuLXR2QTI0VWxDVzJwWXZuLURqckxrQlhtRC13?oc=5",
+     "source": "FXStreet",
+     "time": "11/23 15:02"
     },
     {
-     "title": "AI震盪引發避險情緒 美元指數逼近19個月高點",
-     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9XMHc2M3Y2OWNxQ2FSanNaSE82MFBFSUtmT1RzUXBuLVVQY1Z2dER3aV9LOUpvYXJOb3d2YVdKNm5BUzA4VnZtTmpVaEhjYXA4RW1wY1d5TWRnOE82WjQyc0xrVThvUQ?oc=5",
-     "source": "民視財經網",
-     "time": "11/20 14:17"
+     "title": "隨著交易員削減對聯準會升息的押注，英鎊小幅上漲至1.3100上方",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQNVNSYjc5bHlzTVNZeUpwNF9ubXQ5bUU0N1RYVDVnREhuQ0dXV0YxYWtQR2xVeV9NQjBoVHlHZFhrY1FqTV9zTmU3RG5lemhzMmF3dEVDSG5aZmpqRk93ZGJqZi1Kb2ZaTVlOZ0NicG9UZGV0T0RQcXpGMWVUdFJ1a1diNzRBMjlNQy00dUJQazgxb3htb1BIbmFuek1KdUQ2SUtLbU83Q1NfakFxUkZrNXI1U3hNMHd0ZXhBZFNzRnV5R1VZY0JxZHRtS1kzUFhWeThRSHJ2b00tSGY2TjM1X2pUTmhadU0zYU4zVXk2VQ?oc=5",
+     "source": "FXStreet",
+     "time": "11/23 14:30"
     },
     {
-     "title": "通膨推升開銷 美國年終假期出遊意願創四年新低",
-     "link": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxQRVdKWnRNaV9XVWh4dFh2MzlBM3hMeVZuTUNVb25XWTlWWDU3aU9INl81b3dDSmFlTVd2cHNWVF8tbkFnMkZ2ZzBIN1NFRU5xaUlONkJnd2FDdExrWlgwQlU3X0hiSEFtM3lEdUl1NVJpeW8zTTBUaGRFMEliRnlGa1UzQ3lHVmZnUGVrSnZxcUYtQ0xiNy1EY1BNRC1mbjdIZm1odVROWnBBR1RBZXlTT2VnSDR3c0VRY1ptX2tFdy1OejB0VmJZWGg4ZHJrbjFCNVNhQ29uREVnZ3VxYl9kSXZEbHdXaml0RWVHdnJjTmdxN1AzakR3TjY2ekwzLVVUVFlNdnpXdTRiVlhwcXRiZGpwYkV6Wm5MTEc0eURyMzNjaDNJc0VMckd0QnRWR3gtczEtUThqU0o0amRpcjQ0XzNsVUI1a0JkSDJaMUpQeWszbUFHS19HUXhHUkphRFU?oc=5",
-     "source": "商傳媒",
-     "time": "11/20 13:50"
+     "title": "歐元/美元價格預測：多頭繼續守住1.0950水平",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWHN2LUx5ajAtSHRtTUdyWGlLMDRvS0F1b3Rkc1ZqVkpXWWdZVUJDdVlwRVNSb0RTTGhsMTNwZ1RNakpBdXd6dWFlZzNWOVBVNXdNZDE1blNvSUgyT3hMemljaFkwVmtycG1pYTRqVC1URjNsb3hMQi0wTlQwMG9wREJtU1RBeGs0WFh3SWxGV3NydWxzdmtZai04bmVudDhxaXdKZmEtMGJTYURKbUE?oc=5",
+     "source": "FXStreet",
+     "time": "11/23 14:24"
     },
     {
-     "title": "非農就業數據是什麼？公布時間、大小非農差別一次搞懂｜豐雲學堂 2026 年 11 月",
-     "link": "https://news.google.com/rss/articles/CBMingNBVV95cUxNNDRkLUV1V081YXhMYnJTaVlaNDZ6ZGdJWFFkYk1iWkJjVERvbG5Zd0ZPdVo0TWtrVm5kRVk1UTZieEVPMy1sanJSUGNvWElnQ19uMVYtWlV2bzE5QkVMMERndXVxQS1uQkVNU2RjMjJJYXNKTG9WWWIzbi1icjRNQnBJQmNIRVpidjg3THNEc1FaQWpocElrSEJZeFBpbnZYNVgxcTA1Y05YdVNzVFRlTWt2TUEzRTVLTV8zNXM3V2RLTEsxaGkzeVUxeUxhT216MXpGaVc1RmpwM0YxcGRfWGVSYmt0Y0JhUzF0d2w3U3R1ZDJCRzdpS0FKZHo4YXdWT0hUR3hiclM3RTJSdEVfMlR4cmphYnNPeW1La3lYMThTRVpSTmR3Rzc5OXd4RnRZeWc4OW9vTkpLUzdQQ1p6RU5DN0tQYTBuVWM2UlpBSVlCTWpOQkVVSm9Fazg1aXlFakNrTVRBM0hHVHZERE9uOFNFeXQ1OUhzMHZOR2tfcWI5eDJrRThMcXVrZ3l2NHZhVEZhUmVRN0JYMC1ZZHc?oc=5",
-     "source": "永豐金證券",
-     "time": "11/20 13:28"
+     "title": "美國10月PCE來襲！聯準會升息押注會否增加？黃金、美元迎巨震",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1ZclJZZ0ZFaktNMDZRTEh0VkNMY0c4LURGSUtmVG9NZGN4MDF2M3o4RXF2eW5JT1oxcVhYeHlrR1BrUW5UamEtNHI2VUFsQkFOODg4ZXRnWm1xZkpHbHkwZFpSeDV4NFJxbkpPZk9XUTBiMDkzbVduRQ?oc=5",
+     "source": "Mitrade",
+     "time": "11/23 14:07"
     }
    ]
   },
@@ -1969,34 +2105,34 @@
    "topic": "美債殖利率 / 原油 / 美元",
    "items": [
     {
-     "title": "美元指數價格預測：持續上揚可能延伸至104.60",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVVNtYW1OamZmVWV5VU9IS2dBNDR1RGZweXZGNjRfMmhoUGNjeENlYm9sVC13OUowb2NOend3TjBLcUhrSlZ3UWR6eUFiX3RsY083ek5ITDNvWUQ2cjB3eHNkR1A2U2xZNWJCSDhfZlQ2dGdldUc4YlV4ek1XVW43NU4xek9PeXFkWUtfLWVHTzFrNmJtc0QwcEZwdjdrTE5fMVBHUFdVUElBbHdHZDc5YzRMMkUtOW8?oc=5",
+     "title": "伯恩斯坦：油市三年內恐陷供應過剩 布蘭特原油2028年跌至每桶75美元",
+     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE12TXZOQVVrdFdncENTdlNTRFYyNU9xYUk4cVprZVliMHhhUXVReWVVMllFVUVIalRrazVVS3VWdUJId3NidW5KMUFhYkQteGs?oc=5",
+     "source": "鉅亨網",
+     "time": "11/23 16:30"
+    },
+    {
+     "title": "WTI 原油價格預測：儘管中東局勢令人不安，油價在 83.00 美元下方仍顯疲弱",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZ0UxNVVxdU11SWpwRnk0RGpxeTY5X1lSdk5jN1hGWkN4d2JWaVEzNXNGWGYzNWQzUjctZXZGVmliUTUxblZMUTY5YjNDaEt3LUZIcW5Cd0VidngtWG1WUEtORnJ5VnhZMmZYM3RVUmRFaFlacS15clB3Wnd2WUNBM3JVa0htU0hqcllTMlh1djhRb0VMdkp1Tk10M2h0OXE0UUpZdm92RFFxbWVrOC1fOTJaSnd0U0JDalJYSllPS0RPcm9pSk1fejlReXZ0YmVRNGVZ?oc=5",
+     "source": "www.tmgm.com",
+     "time": "11/23 15:56"
+    },
+    {
+     "title": "WTI 預測：在供應過剩前景下，跌破83.00美元後面臨風險",
+     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPSVYxcnpKTlo2aXBIUTlPMFNBd2JDeGdiM1ZFTnJON1M0YUZKdWFlRXNYZFgySUFicVg0Y1pNRUptbUY5TEtoR1hSczZZcFJRcVdQSzZpbnNBZGdDYXA5LUsxelFYVUZYVjNib2FrdndiWDJTcDYwcGN4MVlDVU9QR2pSbllod01vXy03LWExU0wyZ0UxdEdsSG1jNUVZbTJhUzVsYTZSeHZNNzJiRmk3elpaTU9talRGQ2prS01rQ0EzUmxFMGgxallhSEc2dWdKLWFnellXbDhreDRuc2d0c29DQmEtQkRENVdj?oc=5",
      "source": "FXStreet",
-     "time": "11/20 16:18"
+     "time": "11/23 15:47"
     },
     {
-     "title": "黃金走勢分析：10年期美債殖利率回探5%，金價下探3500，反彈一觸即發？",
-     "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9Ia3FXdDRxUHhTWjhyMjhMVlhzQWpLczcyY3phYkhIZkQyU1A3YVBmemVNb0Z2eG10QjRobFhUbmxvdVhsT2ZkeDFmNXhXMFlITEE0T1dBY0NGUmcyNWhueWF2Qzl0MkE2VDdpMXpxajdQYVBPa29KeEl3?oc=5",
-     "source": "Mitrade",
-     "time": "11/20 15:50"
-    },
-    {
-     "title": "儘管供應量預測創紀錄，WTI在中東襲擊事件之際面臨上行壓力",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQdmZYSkNsTkQzeDZfRnF0T0lOdU9nbUFKZVY3NVBEeXJUbXUzeno5Vmw0M1RZQ3o1S3lNRzNUc2pSOVphMXpqNHZLMlY4RXBfVm1wVlUyeWkydmU3cV9IUlpmZWZFMUMzVG1ZQ0pXdmNiSkFUazdCaHlqb3gtSHhwNkJRM2pvd1V3OThtQ0JQcjRPb0NCZUNET29YdlFMUXBONFctd1piNm82Yi1haVV4QmFjRDNuc01ZWmV5UDBUSFNER2RfU1ZsTkJ3OGs5eC1pVEhLQlBsSkZXZnZWUkE?oc=5",
+     "title": "美元/日元價格預測：儘管美元指數回落，仍以積極表現開啟本週",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMUJfUnRRdjZiVG5qTV9rZFNEWHlhNHM5SGpOV3Uwc1UyTHZjd0VGRE9Ed3pJU255T2NPdHY3ZDhxdUtTNXQxalo3ZWF1dTdTZ0U4eF9EcEFSamV5NUpoaUF1N2hoU3FMNkdQbnBBSDhvV0pyQjBfNjlxVDl2a21iT2FfWkp3MGpLSUdnbF93T2V5bVd1LW9JZmU5QzN6bGVyV2NyLVh2TmFxUHQ4RVgwRHhiSC00V2NEeVd5MF82M0JDM1ZPcExISnZ0SUV0cUpsYW9B?oc=5",
      "source": "FXStreet",
-     "time": "11/20 15:39"
+     "time": "11/23 15:12"
     },
     {
-     "title": "AI震盪引發避險情緒 美元指數逼近19個月高點",
-     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9XMHc2M3Y2OWNxQ2FSanNaSE82MFBFSUtmT1RzUXBuLVVQY1Z2dER3aV9LOUpvYXJOb3d2YVdKNm5BUzA4VnZtTmpVaEhjYXA4RW1wY1d5TWRnOE82WjQyc0xrVThvUQ?oc=5",
-     "source": "民視財經網",
-     "time": "11/20 14:17"
-    },
-    {
-     "title": "《國際油價》胡塞武裝再發攻擊 11/20歐美原油期貨電子盤上漲",
-     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNG0yRDdwdko5Um5tamZRMUk4TDVLaTdwMnZHdlpHWXZlVmFKMlctcWIwbkRvc1BpTm5LMzVxMkIxZWRaVHd2MDBGYWxrdmNsMnlPQ0xwS0lMUFRCcDU0RlBJNWIxQ0F3NzFVWTlEV3paUzF0NGNtSE1NRkRyM1hseTQzZXNXN0Zy?oc=5",
-     "source": "富聯網",
-     "time": "11/20 13:57"
+     "title": "4.4億桶北海原油大挪移！ConocoPhillips砍歐洲資產、回頭「瘋買庫藏股」衝殖利率",
+     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNU3EyS1RsWjExd2lXcFRsTDZTWGFvLWFUbmsyVXNUWGVyTEVGRHRnS1BvNWYta2pTcDBEMjVjajZWZXhPdXVFbEV6YWk4TlM5cm1pRExLVzlnSG1TenVRMTcwQlhwWl9RdWJmM0hkUndRUDJJWWFwZTNEb1FGLWFUcEZlU3VBellCMmszcFhR?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 15:00"
     }
    ]
   },
@@ -2004,40 +2140,40 @@
    "topic": "科技大廠財報與法說會",
    "items": [
     {
-     "title": "輝達財報亮眼台股卻狂崩！分析師揭3大隱憂 緊盯4大止跌訊號",
-     "link": "https://news.google.com/rss/articles/CBMihANBVV95cUxOWkRSQlFuellZdVVpTzJubFh5Y1VFWEJSZnhQbThxaE5HcnhydTN4WERqOHhRYkdCaHlTa1Z5UlJfWThNWU13dmI1aFJZSVE4S2s2dWpqSW9yM0p3ckpGT2JOdnkxNWFKQ1EtYm5QaGFCRWRNc2RZOWtMSU5nanl2YWdGNU5tMjVMNk5RanVRZEhod1U0WVZmNWQySGtIbWRjRTNlcmJVMExneFhhNl9xS1A1NEEwckJnMGhKRjRDSkZENEk2Uy1Pd1ZMX1piVjhHSUdDbGdIWEh2QzJlRUxSNUVkVS1VeDYyZklwSjZLZVFOaWRVWWx5UWM2bVlEMGluU3p2M3Nmb28zWnUzSmhFZDBSck51TUxsc3I2N1hDdl94aUp5V1ZwSzNfMDVpX01veVpfNTFYWjBUdEVQR2hsOVFPZUtLOF83MVhaOGRtV1pZdWZHbTktVTRfSmJaRFBhb3FiRkctRk1UNUhVRjBEOUhTRFVsWUlCQTBHMzBseVYzTTBa?oc=5",
-     "source": "Yahoo新聞",
-     "time": "11/20 15:51"
-    },
-    {
-     "title": "黃仁勳離任後輝達首發財報 加碼千億庫藏股調升財測",
-     "link": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxOVXVCNFVlaHlyS0hqZnpqVEYxQmJXMnp5ZzU1U19Vbm5rVk1keDBHQTJCTDVQZlB3cTctT3pmdTNYMFpDS2REWTZfNTVaS25fMDgwaDBONkVrLTZFX2o1SkpUdTdxYUVsdGJteVhwU25rOUV0X2NFTGxYcVBab3E4bG1sd0NMN3JnOTRvTExmeW1RalZPVXRIenRYS2pFNkFpS203NmQ0cmxPeUhXdGNZOWt6UlpJLWFueDFfN2daYUVrNVdEbE9DTmN3Ulg2QUFqLS15NnZRcUphajdXNjZqeWh0VjBrVkR0eDYzQXBMUkdNRzgwWTJVdWtNb2pGVmd5WTB2a3ZHSDFYSTZCX2NoRTlaVnpvOFFjeGVMSUNybnlid2JlNERjbTdGNmFseFNnUWZqNVUyTFczLWNjbkFfT3ZHeDdlR2tMTjJwb1ZrRWxtVU5jUThveGVjSlhzR0NydWRhaHpidC04dTdQeDBqSHl4U0piY00?oc=5",
-     "source": "商傳媒",
-     "time": "11/20 14:37"
-    },
-    {
-     "title": "高盛博通財報前瞻：維持買入評級，目標價下調至 460 美元",
-     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1Hek5nM2xaX0xvaGo5YzhycUprbDVnRGJFWkdXbTdWNG1LNnhGWmQ5SE5kX25hRUg3aHRwd196d2xCZWVkOG1Ua3RGdGMxbzh1TWw2VnZGVVFwRXRN?oc=5",
-     "source": "深潮TechFlow",
-     "time": "11/20 14:22"
-    },
-    {
-     "title": "川普最新財報曝光！9月買進38萬美元輝達股票",
-     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBRcHFXRXdydk9jNUtFQjNHVi00RGJXaWUxSGV6VUZlVjJfWFIySHduRjhRYjNxdnZ6SGpqd2hRd3g5SmpnM3Q4ODZ1bHVHQmdMbWItMUgwV0hYZVZDaE9kVDBoR2NlTHRGSk1peDByclc1QXYwMUFZ?oc=5",
-     "source": "VOCO News",
-     "time": "11/20 13:04"
-    },
-    {
-     "title": "美國對中AI出口核准僅26%，輝達與超微中國營收會再縮嗎？-柏宇 KD 獲利模式",
-     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbTVTRE5aSlB1Qmlfd18zRThaNDFIR2kyaV9Pb0c5S2RQM3lBYk9rYVV6V1BUcHZWZ2Q5X2llR2g3blFOUHNpeFptOFJiUGpfNGlQT292Nk13M3FPZjFEeDVaOE5EcUFEd2Z1MGxlcVlKRERLNmlpRHFvSEs1ZmFhYw?oc=5",
+     "title": "【即時新聞】今日聯發科攻上漲停，首款AI加速器小量出貨，本季估達25億美元營收",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPdVU1Nm8xZmdNSjNyT1Z5UEdvN05CaWloaDRxeVNLdzh1cmRQclpqaGx2Wk8wTHg3RVRMLVE4aFV2MTNaVW10TVIyUjZUaTgxZmFpak5YYVNyNjk3ZEdyV1I2dkZBOVhwTEgyT2JVbFdFUW9mUnhvTnIyb29Nem5uY25zUGJndmdzakprSWtxbkI?oc=5",
      "source": "CMoney投資網誌",
-     "time": "11/20 10:47"
+     "time": "11/23 15:52"
     },
     {
-     "title": "AI ASIC 與 TPU 動能強勁，大摩喊聯發科目標價 6,188 元",
-     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPb3V5Nm9PVHJ3X2RHLW5McnBxRmtHN0xkUUI1OHJ4bjRyWVhsYlVHaXY4VFJIaDBaSmRDTFBQRzFiWmhoakc0d3FpRjdDa0xxU3ZHYzlEdElLaVVkUEtrdXRmLVlNV2VVOVlHbE0wWUplcXh1MzhQbXduTm9JSmc5UlNuSVpHaThNS2IyV0E1bU56QzlMSWc?oc=5",
+     "title": "聯發科（2454）做什麼？Q3財報優於預期、股價反彈攻漲停，AI ASIC成長動能完整解析｜豐雲學堂2026 年 11 月",
+     "link": "https://news.google.com/rss/articles/CBMi2gNBVV95cUxOZVQxSHlGVjVnelhmeWtmUE4ybG9GUkdLYjBkRXphZUNETk9PVWxsYmUxTFJYQUlpY08zc0U4LWpITGdDcy1DdXJwTFN2Y3JOVk9kci1wWXFab2hzS0hYM3d3U2NPX25rdHdnQmIxbFJuZWJiYkVRbGF6c0RaLURKb3h3dV96MGJRcW5VcUR4Zl8wWDZzOVJXbmZQazNMcEJRdGZMb3VkUVM2Tnp5T3prcUFweldUNE1sUEgxcHBXSFhnRE5jNXVkOTI5S0JwQkpwX3p0bHdGLS1qX3ZVcUR2bWh6X2J5ZW5zc1FuckhSRUltYzRyZkdlRlpOcVBIUXdfMUNnTTlCWDdtVXZUR21mVnR4MGNsRUF3MTc3MHZEZWZyeW5aU3E1UjVsbmlIQUZuSzVQZ1NObG80U2tzMDJHS0xrMTNxME9MMlo1dDVQT0pHTnVkSFdWWG5Ock9JN2V5SFphNWNVWlByVXF1VlVEZFNSRGFCanhNMmFYUll3SW5PMFlyYTJlNXEzMlBmUGhiOGx0d0tXSS1MNXBKdUpkNTgzX2xRZk5pRXBITDVvbGxWR3VDcndpeUNWeWZCRE9jS1JReHBmdVFZRzFPR2E0VzRwN3lydk5SNGc?oc=5",
+     "source": "永豐金證券",
+     "time": "11/23 14:57"
+    },
+    {
+     "title": "投資人關注美最新出口管制對輝達先進晶片業務實質衝擊 漂亮財報難阻股價下挫",
+     "link": "https://news.google.com/rss/articles/CBMi-ANBVV95cUxPa1dpQjhIaXhtbjlWOFQ4SFZzNHNxOTVlanlwSlNnMVFjOHBoWjRfa1plUWNTNnhoX1lMQlZPS05jQzEwUTJEYUFtWDF2c3htdThOWGV0bmdLWTdNMG02YV9NQVpvcE9HaENaLXlta1ROOUJDd1dvRzVoQkVFNGVrdmZqT1JXcEJuY19jMTBDUUItTGdpcEQ1UHlTX3NFQU5BSGw1eGI1MWpxM3liNlpZUmVwQjU4Q2l3dHhvckdUamt1aUxMYU1reWdqU0hPa04ydXVYY01jUzBtNXlnVzYtR2dPVFhWN1c2aTh0bGU5NVFJWk43R1JIOW9zcEVSUnp5Q2JGODE1UHFlM2FnTWE1MXRqWWZUVGxLbWp4ODgwUUQwQWhGYUd1V1VaLXdxdHZXTU1iLU4wX3p3cVh2RXR4QXVLRDFEWkxWSHdNdzNUYmdLSTRRTHRlTnNtMW9fdERfLXpab3Eyb0drSXE5Nm5uZ2hydktPSDNOWkpKSk5IQVl1blZwaXdNQWhacE9lMFZKSFU2aDdXd001eXh4WFdQWjNHVUpUYS1jcEpHcG5DbzhudkhUb0ttZUs4OUxsalhLWjJtazV2ZERuTmRCZm05TnUwUVRKbFMtTUJYS3BlZTdvNnhhT1hrbUdrMkk0V1RwUG5FOTRKc2Y?oc=5",
+     "source": "Yahoo新聞",
+     "time": "11/23 14:13"
+    },
+    {
+     "title": "黃仁勳溫情喊話「願重掌兵符」遭拒，輝達首場無創辦人法說會淪接班角力戰",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUm5rZE5CbllQZWpqNGhTSTlZNUgyREE0T0ZrQ3FVczBwY0dpM0xyZnRyc09yTTVGdW9fc2VZWmhJUWExeV9QRTZFbXpoWmZrcXNmVU11cG8wZk8yaXBobmxkOU9OYVN1ZC16OXU3REpjb0N2bllHVnZKdU9lajFpVWQyTVVPMmdmTERBTFN4Y3V5aV9UdVhqdXBQc1M?oc=5",
      "source": "TechNews 科技新報",
-     "time": "11/20 09:15"
+     "time": "11/23 14:08"
+    },
+    {
+     "title": "最搶手AI職缺出爐！輝達Q4營收衝1300億美元 帶動台積電6台廠人力需求爆增",
+     "link": "https://news.google.com/rss/articles/CBMiugNBVV95cUxPQ1dlOVZ0U3RDaUowdVZaNU5Edm1LdUNOdjc2NWxKYzh0cUpXTnpCQVhmdmZiM2ktYVg0OHpzRTczV3FENVVOWWFWc0ZadTFFajNOTHltUTRFNUpuclRONWlfenBYSXhDbnZJV2xZdHgyUnloUldwT0Z0SjVJQ1ZEamR0YXRudVhKUVd6WmdsU3RWcV9HNV9OSm8wRVkwTmEwdHhCdldLY2NiaHJ2WTEyUzdJSmZYWkpIXy1XTUROaWlXN1V0TWlwY3B3VWZvX1IwUVNUdC1paHpienVLbWRpZXY3R2IySUNDLUU3enc3d2psX1htcEZLWlg2c3VXU2RMczF4eHBBZVAxd003d1lyRk9oZzZKc3dybWl6U0hXVl9tMUt4QXpGc1hoVTVtMm9lR1F6c21qQTJEWGhFcGNnek85WUxGbDVrX3dILVk3b0JZcTFJTXNCanFsYTZHZkJ5cnM1OURBbmktak4tTGEzTmthOWt6YlZjaWhvWVpwWE1La19lUTV2b3lhY29uWE1XZzkwazJYVnFPTVVWV3Y2ZjBDVTJIbkRlRlBUS0s5d2ZVVlFPeElLQ3hn?oc=5",
+     "source": "Yahoo股市",
+     "time": "11/23 14:01"
+    },
+    {
+     "title": "聯發科反彈 攻上漲停",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTUGlRWjNibnNxSHlaUnhFTFVIYWZJMkk3bGFTOGJGT0lqMnhQd0R2c0lNbzYwUjVsaGFYbVR4THlfY1dod1A3UTZHOTVjM1YyUnBqc3hBRWF3dTN6RWI40gFfQVVfeXFMUFNQaVFaM2Juc3FIeVpSeEVMVUhhZkkySTdsYVM4YkZPSWoyeFB3RHZzSU1vNjBSNWxoYVhtVHhMeV9jV2h3UDdRNkc5NWMzVjJScGpzeEFFYXd1M3pFYjg?oc=5",
+     "source": "經濟日報",
+     "time": "11/23 12:57"
     }
    ]
   },
@@ -2045,136 +2181,148 @@
    "topic": "我的持股相關新聞",
    "items": [
     {
-     "title": "【南亞】南亞擴建玻纖布五廠，高階CCL鏈結同步拉升",
-     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTmQ5MW5FYnN5ci11NDg3aktiR09mckNUUzNmZ1ZseTRqMUROVnp2d2MxMWxQQWttWEJ2eE9seG1PQkppNWVEXzhDdkJfdjg3cGRwRjZyUkxOSXZURzY2d1ZpYjFudlRzb2FlNkRmeGNGNjJoNHhBX1lHMDFMajJaVW5iVjJ1Z2piMk1tNExNWk5DZw?oc=5",
-     "source": "台視全球資訊網",
-     "time": "11/20 11:35"
-    },
-    {
-     "title": "【南亞】台塑四寶誰最會賺？法人點名「這檔」明年EPS飆31.28元 目標價310元、潛在漲幅35％",
-     "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ucjJzdzRvekVxSjZ2NmNxUUpQTGM0Yzg0Q2dJbmI3aDlIclBRcnZHRUNoNXpHdzdEWmZ2QVk0UGptdTVxMGVFZU1NOA?oc=5",
-     "source": "FTNN 新聞網",
-     "time": "11/20 11:14"
-    },
-    {
-     "title": "【中砂】【即時新聞】今日大型投顧點名中砂，看好其2028年獲利動能抵銷修正風險！",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUnpydG5HRjYwVl9MT19uWVhyakU4RDkwbDIzQkpiR055anVTRThNdkNQem5CaWhHUm1JM1NIbUhfMC0zOHJFX1RjSnVzMFJfS1NqaFV0eUxHZV9uN0cyYUh3VjRDY0IyYXVxU0RSa0wxWFNDejY1VjIwem5IUktJeF9lOFRrZHVQbXBfbm9RUGM?oc=5",
+     "title": "【南亞】【即時新聞】南亞23日強攻漲停226.5元，單日貢獻大盤55點！",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZWZ4RTN4clkyQ3J2OVRLVzlpbXhHdnVQbmhfM3JELXBucjZXUFQ5U3h0RDRmYXp2bEhGb2FzQWM5My05eGtVWlRESHZ3MzdOX19vSnZCbEFXYy1qVk5aTi1qdE81MVFTRzRSX2I0cTJQYlZuMVFXMTdpOWIzSW8xa3BEZHptSllFUEJhT2U3eFI?oc=5",
      "source": "CMoney投資網誌",
-     "time": "11/20 15:34"
+     "time": "11/23 16:51"
     },
     {
-     "title": "【中砂】整理包／台積電供應鏈全解析！護國神山受惠股...先進製程 CoWoS、CoPoS 十大產業鏈一次看",
-     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZLVp5RjlPenFrcTRSSnFmem04R1h0SVZPSzhaVjdZVkJ1UG5WMWl5Tm5Gc2J6Wjlia0g0R3NQa2JkekdsUnRudWNwQWtHcGRpaDNleE5iNEJNc3o4?oc=5",
+     "title": "【南亞】【即時新聞】國安基金進場台股強彈778點，南亞今日成交量大增且股價走高帶動多頭",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRnZzX1pWYktaYmJ3NXFxUkd6Q19FdGlyWTRBSmtKejNqT1BWbmpJbWJYeUJXaWFUenFaRVRxQzc2MDQ5cmp2c0UyVnVtS3EtSUtUZ0lXRFN4NV9ONjB6c01hQk1lMWxVeThBNS0wMGRKb192S3VRMWZfX2VuQk5oSVIycGlEYnVFTGFvS3VtM0I?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 15:51"
+    },
+    {
+     "title": "【中砂】富世達 兩檔硬挺",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mQlllX0FPSG1hTXZCamVZVkdKeEppX21JNzdhZ0VZUzRObmdYWUZSMl9mTVBXbVdCNG5WS2U1d0pKRmg5R1NFdGJzZHJLY292NlkxTTAweTRld9IBX0FVX3lxTE8wYlRLWEhaTXdUbVpaWkhSLVd6M0o4cFI0dFFMUnUyWjdFeDVGUW1ScDAwSWZ6NzZTZmhDV0E4YVlrZ09MT0JfeXB0RTJFbHlTWXpnNU9wR3Zla05Vallr?oc=5",
      "source": "經濟日報",
-     "time": "11/18 16:00"
+     "time": "11/23 00:57"
     },
     {
-     "title": "【台達電】台達電跌停剩900元「半年慘崩65％」！大摩看好營收逐季成長 目標價喊2300元…籌碼動向藏端倪",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1waEV6MlBuUThTMktFcS1CbjliNXl6cE4yMTg3OFhXa0ZUVlpESTJzZXpOcXRWSFZEM3FuTjhwbERtYVJ2LUNobTdlN0JOQWRYTHVvWjA1NG80VjRmUTJjZlpsV1pfMHJpY1E?oc=5",
-     "source": "旺得富理財網",
-     "time": "11/20 15:37"
+     "title": "【中砂】晶圓再生與薄化族群重挫近一成，成熟製程拉貨能否回溫？-林彥廷看盤室",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNODMycHZnWnZ4WDhqN2V2UjFnX3RkSXg3clhMX2RzbThEN1lpUEJjbG5SM1V5dW9xR2dQRHZ1MjVORnJubjJkLVBkdFZHNzg1blBmSEJVM3k0OHMyNkdETDJhVkFOdTZESHJhbkNvTWFCSDJfc0Z0ZVY4SW5ZMFJpQ1lTTQ?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/22 17:22"
     },
     {
-     "title": "【台達電】〈焦點股〉台達電失守千元挫跌停 半年跌逾6成市值蒸發4兆元",
-     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5mUFI1S3lwc3NKc1phOGQybHFBQkpxbnptbXRWZFJOYk9JZjNrZ0tLOWpFTkhSbmQ0eGZfWXdrRGdpaTFYdFhSR2JzdGRtZnM?oc=5",
+     "title": "【台達電】台達電建檳城AI基地，擴電源機櫃/液冷出貨",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOC1wMkhjOWVpbm9qNmJKMHhGcmhDZzJoNnBSMkZ4OHZBNlRaNS1PeXJTUG1ZMkZCQnkyYU1QLWxuLVd1eDFVckdTMEEwMkUwWmlvdVNLUGZlSElpWVZzbDJESURkalNiUGQ4bHZvclppS3JxcmhpYUpSd0syZm1rdnRJSmZ2MFA4NWIxN19sV0N1QQ?oc=5",
+     "source": "台視全球資訊網",
+     "time": "11/23 13:17"
+    },
+    {
+     "title": "【台達電】【即時新聞】台達電(2308)跌停後強彈逾6%！這「4檔概念股」資金輪動必看！",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNG4wd05SV2JOaW5YSmdiVVdNTjVGSmhELVNMblZCaHBET2tiOG5HWGlqWGVQa2JOWjNwakY0aGlXMldReDd4U2xiT2pVd1B6R3JwWFBjMkg4YkhhSEJTdHBpRGhVTTJRNHJvZVdpQWRoS3g0eHAxZ2h3R1V4aUx6S0lZckdvQkFaSEZrZG9Fczc?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 11:10"
+    },
+    {
+     "title": "【台積電】最搶手AI職缺出爐！輝達Q4營收衝1300億美元 帶動台積電6台廠人力需求爆增",
+     "link": "https://news.google.com/rss/articles/CBMiugNBVV95cUxPQ1dlOVZ0U3RDaUowdVZaNU5Edm1LdUNOdjc2NWxKYzh0cUpXTnpCQVhmdmZiM2ktYVg0OHpzRTczV3FENVVOWWFWc0ZadTFFajNOTHltUTRFNUpuclRONWlfenBYSXhDbnZJV2xZdHgyUnloUldwT0Z0SjVJQ1ZEamR0YXRudVhKUVd6WmdsU3RWcV9HNV9OSm8wRVkwTmEwdHhCdldLY2NiaHJ2WTEyUzdJSmZYWkpIXy1XTUROaWlXN1V0TWlwY3B3VWZvX1IwUVNUdC1paHpienVLbWRpZXY3R2IySUNDLUU3enc3d2psX1htcEZLWlg2c3VXU2RMczF4eHBBZVAxd003d1lyRk9oZzZKc3dybWl6U0hXVl9tMUt4QXpGc1hoVTVtMm9lR1F6c21qQTJEWGhFcGNnek85WUxGbDVrX3dILVk3b0JZcTFJTXNCanFsYTZHZkJ5cnM1OURBbmktak4tTGEzTmthOWt6YlZjaWhvWVpwWE1La19lUTV2b3lhY29uWE1XZzkwazJYVnFPTVVWV3Y2ZjBDVTJIbkRlRlBUS0s5d2ZVVlFPeElLQ3hn?oc=5",
+     "source": "Yahoo股市",
+     "time": "11/23 14:01"
+    },
+    {
+     "title": "【台積電】【即時新聞】今日最新公布台積電Q3獲利達29.43元創單季新高，10月營收年增高達59.7%！",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWDRwZzJfLUpZd09BNkNlSGZpZy1qV0ljeHhWV2loSTNnbzlqNVRiODg3Z29TTzItVVFidnNYVHlXMEtic01jWnh3aFUteUk3dXg2NWg3THZKV1hLMmMzalV1MmFJME84azNRLXFxOGNVdTYtM2hLclJhOUJiZ3cwZmJEQU5RTy14T1JJU0d2RGQ?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 06:39"
+    },
+    {
+     "title": "【京元電子】週一(23日)官股銀行券商主要進出個股(一)",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeDg5T0dpYlBnbXktSFBKUmF0M2NIMVNrWGZueGVKOHRLc1MteVltTy14RGdKaTR0Z2JBQjZndkFzaEF4Y1JrSmtRQXFILXJTVmg0ekV0akRXZlIzMml0S3IwUThFODQ5Q2h6RlplRHlFY0tKbXhhdXhOc2c4Y1djX3BqQ2c1cHBv?oc=5",
+     "source": "富聯網",
+     "time": "11/23 15:56"
+    },
+    {
+     "title": "【京元電子】最搶手AI職缺出爐！輝達Q4營收衝1300億美元 帶動台積電6台廠人力需求爆增",
+     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XSk5YYWtrV2RVVnNWNmJlVXA1SHBlV2k2Y3ZEcUk5X2VwRGNfR1ltdGdNYmpSZGVwem0wU3R4MzBvUzRrN1lfVWV1aEg4dE0?oc=5",
      "source": "鉅亨網",
-     "time": "11/20 13:10"
+     "time": "11/23 13:19"
     },
     {
-     "title": "【台積電】台積電鎖緊16奈米大門卻傷不到筋骨？美國將製造端變管制關卡",
-     "link": "https://news.google.com/rss/articles/CBMilwNBVV95cUxOb3F4aldHajJBVW51TW1XVlFnUzQ1emZ3UVkyUzBEaDBsM0VfVzZ1U2gwV3pKamkwNXJQVmlQYll5MnBqNmZEVFE3VTlqMXNjN203djF3b3pnZVZMaHRWZ2h3Q19faU5DaUU1NHFVMG1iZll4UjZldXhRamE3U3YzMzBianlocmt2RlI2WEhvVTZQdVpwZXBvRE85Sk9uQWdIcW5NSmdOOWY3TWV2OXhEczdBT3hqQXVPWUpPWjc2TE0wVGZreGxmaGFCV2pLNzNTSEtVY255NUFRdWZpYktBaEN2dnVpcTZVbHJIVHBFWk5FcWNyMFF4Ulp6TFdsQUFNZ0xUS3IxODNza3hoY2ZzaGxYME9EVWp3Y2kyMjVkYXZjOGozeVR0T0JQUDJKSnJvT2pZUDFBZ0tGc0dhdlhwenNqcElkTlNQaUR4cF9pZzkxbTc4MHpZMy0xVzNiV05oUFltWGpVZWNkaWZhbVF1U2RSYXc1alhCVjk3YzBuenpaNDh3OXZKZ01MNHN0X25nWUZqUGQxVQ?oc=5",
-     "source": "台灣好新聞",
-     "time": "11/20 11:31"
-    },
-    {
-     "title": "【台積電】AI股抱到2030該買誰？美媒看好台積電 揭勝過輝達原因",
-     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UaDF3WVJXcDN4WnRhUm9iQ3VmSldtOEwzWDYtbWp3cW85WDd5Q1ozSEEwZWdIeE5zS2N3cnNLaVFUTkJ2NElZd3VHX0todDg?oc=5",
-     "source": "TVBS",
-     "time": "11/20 10:32"
-    },
-    {
-     "title": "【京元電子】【即時新聞】京元電(2449)跳水重挫逼近跌停，這「4檔概念股」同步遭大戶調節！",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOT0U3bUM2VExpMjdwemNqMGR3UzVPSkxRN3FmQVQ4M1lUWFpMOGR2TE9MdTAyckd3dWpzbXJJaXNWLVFaV21aSGx1QmRkZUtQcy1Ndzh3VjBPOXRHUWxwMWNwTlVJZTdLM0hCVmJQTWVuRVl6Q3lYb2xtMHJDbmxtY0dKcDZMQ3NacWwySjRKcW8?oc=5",
+     "title": "【聯發科】【即時新聞】今日聯發科攻上漲停，首款AI加速器小量出貨，本季估達25億美元營收",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPdVU1Nm8xZmdNSjNyT1Z5UEdvN05CaWloaDRxeVNLdzh1cmRQclpqaGx2Wk8wTHg3RVRMLVE4aFV2MTNaVW10TVIyUjZUaTgxZmFpak5YYVNyNjk3ZEdyV1I2dkZBOVhwTEgyT2JVbFdFUW9mUnhvTnIyb29Nem5uY25zUGJndmdzakprSWtxbkI?oc=5",
      "source": "CMoney投資網誌",
-     "time": "11/19 11:18"
+     "time": "11/23 15:52"
     },
     {
-     "title": "【京元電子】【即時新聞】2449最新獲11億挹注，這3檔概念股爆量重挫還能追嗎？",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOUFJRjJYNDN5S2tBLWowdExiY0hRQ29LSExuWFRnSy1TTHVXRzhzMEtzS3dwOFRfNGFPVi12aTBHT0o3SG1lbldwNk1pYlpiRlRycndDVVFmLWRxY2FPY3N0aFk1SjdHZzBNbWRZbmdYT0NmYXlXdWZQdEttRExOcVVObHQ4Z2xDVlBCS29mNmc?oc=5",
-     "source": "CMoney投資網誌",
-     "time": "11/19 10:42"
+     "title": "【聯發科】聯發科（2454）做什麼？Q3財報優於預期、股價反彈攻漲停，AI ASIC成長動能完整解析｜豐雲學堂2026 年 11 月",
+     "link": "https://news.google.com/rss/articles/CBMi2gNBVV95cUxOZVQxSHlGVjVnelhmeWtmUE4ybG9GUkdLYjBkRXphZUNETk9PVWxsYmUxTFJYQUlpY08zc0U4LWpITGdDcy1DdXJwTFN2Y3JOVk9kci1wWXFab2hzS0hYM3d3U2NPX25rdHdnQmIxbFJuZWJiYkVRbGF6c0RaLURKb3h3dV96MGJRcW5VcUR4Zl8wWDZzOVJXbmZQazNMcEJRdGZMb3VkUVM2Tnp5T3prcUFweldUNE1sUEgxcHBXSFhnRE5jNXVkOTI5S0JwQkpwX3p0bHdGLS1qX3ZVcUR2bWh6X2J5ZW5zc1FuckhSRUltYzRyZkdlRlpOcVBIUXdfMUNnTTlCWDdtVXZUR21mVnR4MGNsRUF3MTc3MHZEZWZyeW5aU3E1UjVsbmlIQUZuSzVQZ1NObG80U2tzMDJHS0xrMTNxME9MMlo1dDVQT0pHTnVkSFdWWG5Ock9JN2V5SFphNWNVWlByVXF1VlVEZFNSRGFCanhNMmFYUll3SW5PMFlyYTJlNXEzMlBmUGhiOGx0d0tXSS1MNXBKdUpkNTgzX2xRZk5pRXBITDVvbGxWR3VDcndpeUNWeWZCRE9jS1JReHBmdVFZRzFPR2E0VzRwN3lydk5SNGc?oc=5",
+     "source": "永豐金證券",
+     "time": "11/23 14:57"
     },
     {
-     "title": "【聯發科】《半導體》聯發科AI大單旺到2031年！外資喊價6188元、看好TPU拿新單- 上市櫃",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBnSFpuM0h0UmpOd05JcndwQXVFZk9xbTVpQVZRNU1DR1pqVUI2cnByMW51eU9UN2xXZzZMLWtUaUFYTXExNHJINldpSzgxak9nLWpsZmhQcHF4dVFkMFluNGs3ZVR5dXBvdlE?oc=5",
-     "source": "旺得富理財網",
-     "time": "11/20 10:03"
+     "title": "【華新科】〈焦點股〉玻纖布全面復活 台玻亮燈爆量鎖漲停",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9rZDNKRmlCc1VwSTNHelpqRFNyY2xUaW43VTdhbjVCOTlyX0F0UllhbVR2dkExbkdMQjFTN1JlbXF2Y3pjTU9rR2dWTjZrbDNzM1hNSXhlclpaNTZtZ3BSQXB6bFQ?oc=5",
+     "source": "TradingView",
+     "time": "11/23 14:41"
     },
     {
-     "title": "【聯發科】AI ASIC 與 TPU 動能強勁，大摩喊聯發科目標價 6,188 元",
-     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPb3V5Nm9PVHJ3X2RHLW5McnBxRmtHN0xkUUI1OHJ4bjRyWVhsYlVHaXY4VFJIaDBaSmRDTFBQRzFiWmhoakc0d3FpRjdDa0xxU3ZHYzlEdElLaVVkUEtrdXRmLVlNV2VVOVlHbE0wWUplcXh1MzhQbXduTm9JSmc5UlNuSVpHaThNS2IyV0E1bU56QzlMSWc?oc=5",
-     "source": "TechNews 科技新報",
-     "time": "11/20 09:15"
+     "title": "【華新科】〈焦點股〉華新業外收益帶動前三季獲利、同步攻AI商機 價量齊揚",
+     "link": "https://news.google.com/rss/articles/CBMikANBVV95cUxPNlIyQWV3cUs3eWVTdEN6R2lpVG9CMzBmTTBzRXpqS3ZCbUZhZE9HNlBmcVBPRmtYRVhBdkxua01YazJxM2loNXRNbEZVOEZhOVZQMXBqbVgxRzZqODdyZXBpOHc2MlpfYjZiTGptQjNaMHNPTUN5M3ZJX3VUSDloNWg2ZGpkd294MC1aNzF0VFdncE9xUEJuMGl5MGt5QjJGN2xKeU5iQzV6YnZnTEFMTlJ6WlZhanJjelJXTndQTGhjY0dTa292a2ZyOWYxZ1FkczdDNDFqQnZqUE4xNVFqOUJUeUd4XzM4MVpLS1RwNjF3Wk91ZW5ZSEtoeWZBZ2JLeXdjUFpsYjFpc1RyRGU0ZU9HczUwY09GdXJES1lMTzFIM0dhZk9ZQzdvTFJqeDZ0b292Ykx5Y2lOUkFrOENHZUhDTjJTaS1oMjh1S0Y4MTNXT0E5OUFXUmZ5Z1FiWGVLZnlQc0hkaC1SUVl3Sl9VVUlRT0F3ajR1MnFIVzBMWUxtZjNmRE9DNWdIZURnWkE0?oc=5",
+     "source": "Yahoo 財經",
+     "time": "11/23 12:31"
     },
     {
-     "title": "【華新科】華新60年新局3》焦家四兄弟各掌一片天 9家企業成績單曝光",
-     "link": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxQUktualV5QWlOZF9JdUdZRWwxV2lYdTV0dWlReEVUbUVrM3lvRXU4WmZzakI4ZkwzYkdmdzdaVUlERnh0eV8wbTd2OU9mOHpFb0FVZng1dHpHRnN1VEJkT3M3ams5VUJYQnpiSmY0N25jTGY4WHlPUmZNanlfT2x5U1BLRWdkeE83TGd4NmZrbl9QcVlkT3RZVG5EV3AtaUZ6RXdNVmVuZ0Y5ZkMyei0zMFBxT29Bd2dFd1NySUNLTGZ6SDh3NW1ndFNDVUJyUGk2anFCVnQzUi1wb1BSU3c3Tmp4bFdpc3dueGNIYUNwaTgyX3NxTTRFU2FXeTN6ekg3eU5CcWxXM195YVZSek01RU1iSG9YbE1ocWhoWjRzemJ6QVdYa25mU3ZlLVNkNUlrdnZQc0MtX2xSdHFSWHIxck1YTmVNME1qR18yWWhmOU5IQTdmcjRhdndVLXBDOS1sTDRVNA?oc=5",
-     "source": "Yahoo新聞",
-     "time": "11/20 06:02"
+     "title": "【波若威】國巨本益比殺回原形！CPO、封測產能遲到，聯亞、上詮、波若威財報一比見真章",
+     "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1rSFZxVmFZNWVFZnhSbC1iMDdENldWVGNYSld5dzhfYUNjNVRsY0g0cnNBWlZVMWpJZ1huR0k2eXdaOHVTQzNudW10Y3RaZDRXRzFhTW40cw?oc=5",
+     "source": "玩股網",
+     "time": "11/23 15:44"
     },
     {
-     "title": "【華新科】華新麗華60年3》華新科焦佑衡搶攻AI高階需求！跨國結盟整合資源 打造電子元件王國",
-     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE53R1RYdEJfcDdkRG5SbVM4dUsxQ0Z5LS02THVtVER4X0VlY2I4b0N5Y3ZPWW1tSHlIYUcxTlFxeThXUWtncVpuZFJrMkZzMVBveDRfMFlmNXJhQzVrdllPdFZ6UnVjTzR2a1ppVllSRzVyOXRJOGZoLWRsdw?oc=5",
-     "source": "財訊",
-     "time": "11/19 16:09"
+     "title": "【波若威】11/23 🚀【連續綠K終於出現第一根紅棒！台股千點反攻，真的見底了嗎？】",
+     "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBuNWJaREZDY2VzeURSMHZVUzlHQ1ZTMklHWDR2aGNMY0JzWGZDWW1WSElzZEJsaGthS1VvakdDR3R1Z25qLXp6eg?oc=5",
+     "source": "鉅亨號",
+     "time": "11/23 15:29"
     },
     {
-     "title": "【榮科】11月20日 Genet新聞: 【禾榮科法說】、【普生】CLIA平台簽訂五年期經銷合約攜手銓鋒生醫切入兩家醫療院所、《11/19日法人買超》外資買超前三名：台肥(1158張)、視陽(788張)、漢達(774張)【11/19日股價漲幅】巨生醫(+11.37%)、視陽(+9.01%)、台寶生醫(+3.07%) - 生技",
-     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE02UFpibkhFRV84V2piSENvQmNIcDR5S2xqSW5POWhzbnY4WWdNTmhtUWYtMkFMNVlRaGZSLTNsUFpJajFuZUVrWEJzYTQ0bXplTXJmMS1PTVEtRWtkRHN3YkI5VG9PTndLQ3U1dTZB?oc=5",
-     "source": "生技投資第一站-Genet觀點",
-     "time": "11/20 08:07"
+     "title": "【榮科】泰博(4736) 個股概覽 | 個股 - 股市",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9hTzRMVE9ic2tvT1NuWEM4NHdjZzhtTDVJaTZacEZOaGZ0ZzY5Zm9kV3hleHd2cUNVOXpNbU00NFV4T2V0VWplUExfc2NTVlZuZFQ0?oc=5",
+     "source": "CMoney",
+     "time": "11/22 00:26"
     },
     {
      "title": "【榮科】馬年風向球／ABF啟動超級循環！AI基建引爆PCB、CCL商機",
      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA4RklDN21TenFJcTlIMEJEeTFfSGtmbGJXNXFxWTNvWkRRcVlHb1d1WkZlUFRSRTF3VElBaHVQdFg3TWhWblV5LTU0NVB5cjN0emR1SU12T0NQVTIwUXV3?oc=5",
      "source": "非凡新聞台",
-     "time": "11/20 03:00"
+     "time": "11/21 15:40"
     },
     {
-     "title": "【環球晶】台灣半導體還能旺多久？AI利空浮現他問「到頂了嗎」 網嘆：終究是景氣循環股",
-     "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0tQW5KRVNISlJQb1I5X2lHbXZ3dUFQektmRmZBczhOOGJ6VzJtaTVkZTI1bjN4UWdOdmM2S1IxaFB6Vnktd29fblA0WQ?oc=5",
-     "source": "FTNN 新聞網",
-     "time": "11/20 10:58"
-    },
-    {
-     "title": "【環球晶】晶圓材料股集體跌停，賣壓沉澱後誰能先止穩？-林彥廷看盤室",
-     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQS2VkNW9tN2ZNeU4xWGloRU8tQjJEc3NsYXB4VC02bXZFZGZhYjhtWFdUakNQMlViMWZEQklybTdSUjFkQVF4QTJwaDVEYVJfMFF4SGtHZ0U3UU9RbHloa3BPT0hIUG1fOFdfcDNoamVwdXNHSFFUY0V0Qk9uNHBuT3RaZw?oc=5",
-     "source": "CMoney投資網誌",
-     "time": "11/20 10:43"
-    },
-    {
-     "title": "【群聯】群聯(8299) 個股概覽 | 個股 - 股市",
-     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1oSkh4Q2F4Z1pPRVZkZWNYWXVQNEExZDlPdl9zZ25zQXlIemFpVlB5bG43WFM2VzhuOGdBOTZFRGU3VHhhd3BnSVFVb01BcTM5ZGxn?oc=5",
+     "title": "【環球晶】6488 環球晶 - 雖然我都說環球晶是垃圾（他真的垃圾） 但是我覺得今年600... - 股市爆料同學會",
+     "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8wSnFLTDNjOVFiSEUtU2FZS2IzT0RwTnkybGtjZVgtS1Nfb2xnZi1LcHVwdHlocGRydl9NMTQ2TlVpSmQ3Wmc1WGZHNHNkSW1kRG90QTBCVTI?oc=5",
      "source": "CMoney",
-     "time": "11/20 15:34"
+     "time": "11/22 16:45"
     },
     {
-     "title": "【群聯】南亞科跌停、華邦電見8字頭！群聯、旺宏、力積電...記憶體全垮了 老牌法人示警「3變數」：報價Q1凍漲",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE91QmR5cC05MnR5WERJcWhJMVBpZm50cHZ1VERSVTVieTJaMUozRXV4MVpnUFh6cHpkMXp2MzVDNm1MbVlzZVRFM3RJczhaQlNvdnh5OUFaZGVLV3dhLU9DYWptOXEyQU5EV1E?oc=5",
-     "source": "旺得富理財網",
-     "time": "11/20 14:12"
+     "title": "【環球晶】晶圓材料族群盤中重挫，庫存去化後訂單能否回溫？-林彥廷看盤室",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQWVxSktFUWJweGdremRsTjNLWTRfMl9GUTNMcGMzYjFTcVhOeC12LVJfTmtIT0FTX1NKZDIwWDRyaGd3eF9FYVRIT1prVktOODVWaGoyc3RkMlQ4N3ViTVlFamp3cFFDZXBBcU9WX1Y3Z25pRlFLVTdRZ1o5RmlBaW9vSQ?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/22 10:42"
     },
     {
-     "title": "【金居】EPS狂賺24.95元！「這PCB大廠」10月營收暴增70％ 法人看2027年再衝高、獲利成長超車營收",
-     "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4zUjRsWEdYMFF6LXBEcFlMZ0dtSDlfcEJVTHZWUmNLVDJUZ2tXQ1pTd2t0WENzbkJPZ01wU0JaMmprX1lDQmRzM3VDZw?oc=5",
-     "source": "FTNN 新聞網",
-     "time": "11/20 09:25"
+     "title": "【群聯】大盤還在翻黑，記憶體先漲停了——11/23反攻的四個原因，以及一個更重要的問題：籌碼健康了嗎？",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBPblozRFVkcExGMk96S21MZmFTYkJ1OFFqRXhDdU4zd0FxYTQ2cUU2MGJVTkVLS2NkeDNPSGJTS1lueUM1Vm9sOFhXeWREOXdtMUlqbnI2MEsyMVE1VDlSaksyX3V6dGEtdlJBVEVFRVBZa003aWJOem1uemV3Zw?oc=5",
+     "source": "CMoney投資網誌",
+     "time": "11/23 16:37"
     },
     {
-     "title": "【金居】AI測試需求升溫！中探針(6217)營收寫新高鎖漲停！",
-     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBETzV2QVpyRjJJcXBVc3QwQ1dmcWlkR2kzdHpVMUJkMGFyZW95NFROQzNzOENPSkpqZHF6SmVQRWFwc1BlekRJaDY5SVlDaTdqUFdKS2NtUVZDZw?oc=5",
-     "source": "口袋證券",
-     "time": "11/19 19:43"
+     "title": "【群聯】《熱門族群》台股破底翻 千金股拚出聯發科等6檔紅燈",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTmxNQlpkcEZHYndNMkRmdTRUd3JLQTl2QWhwTl8xeU1adGkxNzhRX0xEbm5RQ01mMFFsb093VFQ1Wm92T0Y2X1p2UXZ0cHE1b1gzSlAtNG1OaTU3ZHhfWEJkZmpKMVlQRGZFQ1hMS2ZJSVp0RmxkaVRxNDZ1d0M0THFUNFhXLWFr?oc=5",
+     "source": "富聯網",
+     "time": "11/23 13:48"
+    },
+    {
+     "title": "【金居】《台北股市》台股高波動 留意三大訊號",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNLVRoMU82NmFyejhjS2hXVEZfRlFZZThuNTZLQWQzR3JWTFI3ZkFhcUVsTzVvdnpuVXFOZUg1ZUhueXNTUnF5U1VSaVlMZDh2TlNubmVETkRTWW9aNGRsYzdsRWZVZF9MVHlRQ3lHRXR4a0xVdEczNHFleERpR2dxYUpaY2RYVEly?oc=5",
+     "source": "富聯網",
+     "time": "11/22 10:40"
+    },
+    {
+     "title": "【金居】金居(8358) 個股概覽 | 個股 - 股市",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE05bnZvU3V0dk5xbHZEUGJXMUlheWdUVl9IUjhZZWNwbU00eUlKYWM0bFY5RTMydnJzdjE5NnIyOTl1RWg2WUZXNHA5T1Z3NTRWTGRr?oc=5",
+     "source": "CMoney",
+     "time": "11/22 01:33"
     }
    ]
   }
