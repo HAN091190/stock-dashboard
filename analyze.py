@@ -14,6 +14,7 @@ import pandas as pd
 import requests
 import yfinance as yf
 
+import chips
 import macro
 
 ROOT = Path(__file__).parent
@@ -269,6 +270,14 @@ def main():
     }
     for r in out["revenue"]:
         r["holding"] = r["code"] in hold_codes
+
+    print("抓取大盤籌碼（融資、三大法人、期貨、選擇權）…")
+    prev_path = ROOT / "docs" / "data.json"
+    prev = json.loads(prev_path.read_text(encoding="utf-8")) if prev_path.exists() else {}
+    c = macro.safe(chips.collect, cfg, market, default=None)
+    if c:
+        c["history"] = chips.merge_history((prev.get("chips") or {}).get("history"), c)
+        out["chips"] = c
     (ROOT / "docs").mkdir(exist_ok=True)
     (ROOT / "docs" / "data.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     (ROOT / "report.md").write_text(report_md(out), encoding="utf-8")
@@ -284,6 +293,7 @@ def report_md(out):
     m = out.get("market")
     if m:
         lines += [f"**大盤 加權指數** {m['close']:,.2f}（{sign(m['change_pct'])}）・{m['verdict']}・{sigs(m)}", ""]
+    lines += report_chips_md(out.get("chips"))
 
     lines += ["## 我的持股", ""]
     if out["holdings"]:
@@ -310,6 +320,32 @@ def report_md(out):
 
     lines += ["", "---", "依技術指標與公開資料自動產生，僅供參考，不構成投資建議。"]
     return "\n".join(lines)
+
+
+def report_chips_md(c):
+    if not c:
+        return []
+    sg = c["signal"]
+    L = ["## 大盤籌碼", "", f"**下一交易日觀察傾向：{c['outlook']}**（籌碼 {sg['verdict']} {sg['score']:+d}＋技術面）", ""]
+    tv, mg, inst = c.get("turnover"), c.get("margin"), c.get("institutional")
+    fut, pc, opt = c.get("futures"), c.get("pc"), c.get("options")
+    if tv:
+        L.append(f"- 成交金額 {tv['value_bn']:,.0f} 億（5 日均 {tv['avg5_bn']:,.0f} 億）")
+    if mg:
+        L.append(f"- 融資餘額 {mg['balance_bn']:,.1f} 億（{mg['chg_bn']:+,.1f} 億，{mg['date'][5:]}）")
+    if inst:
+        L.append(f"- 三大法人現貨：外資 {inst['foreign_bn']:+,.1f} 億｜投信 {inst['trust_bn']:+,.1f} 億｜"
+                 f"自營商 {inst['dealer_bn']:+,.1f} 億｜合計 {inst['total_bn']:+,.1f} 億")
+    if fut:
+        f = lambda x: f"{x['net']:+,} 口" + (f"（{x['chg']:+,}）" if x.get("chg") is not None else "") if x["net"] is not None else "—"
+        L.append(f"- 台指期淨未平倉：外資 {f(fut['foreign'])}｜投信 {f(fut['trust'])}｜自營商 {f(fut['dealer'])}")
+    if pc:
+        L.append(f"- 選擇權 P/C 未平倉比 {pc['oi_ratio']:.1f}%（成交量比 {pc['vol_ratio']:.1f}%）")
+    if opt:
+        L.append(f"- 外資選擇權未平倉淨額：買權 {opt['call']['net_lots']:+,} 口（{opt['call']['net_amt_bn']:+.2f} 億）｜"
+                 f"賣權 {opt['put']['net_lots']:+,} 口（{opt['put']['net_amt_bn']:+.2f} 億）")
+    L += [""] + [f"- ▲ {x}" for x in sg["bull"]] + [f"- ▼ {x}" for x in sg["bear"]] + [""]
+    return L
 
 
 def report_macro_md(out):

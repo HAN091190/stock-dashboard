@@ -37,6 +37,15 @@ h2 small { color: var(--muted); font-weight: 400; font-size: 13px; }
 .b-中性偏多 { background: var(--chip-up); color: var(--up); opacity: .85; }
 .b-中性 { background: var(--chip-n); color: var(--muted); }
 .b-偏弱 { background: var(--chip-down); color: var(--down); }
+.b-中性偏空 { background: var(--chip-down); color: var(--down); opacity: .85; }
+.b-偏空 { background: var(--chip-down); color: var(--down); }
+.b-多空拉鋸 { background: var(--chip-n); color: var(--warn); }
+.outlook { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 12px; }
+.outlook .big { font-size: 20px; font-weight: 700; }
+.chipcols { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); margin-top: 12px; }
+.kv { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 14px; font-variant-numeric: tabular-nums; }
+.kv:last-child { border-bottom: 0; }
+.kv span:first-child { color: var(--muted); }
 .stats { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: 13px; margin: 6px 0; font-variant-numeric: tabular-nums; }
 ul.sig { list-style: none; padding: 0; margin: 8px 0 0; font-size: 13.5px; }
 ul.sig li { padding-left: 18px; position: relative; margin: 2px 0; }
@@ -88,6 +97,16 @@ tr:last-child td { border-bottom: 0; }
 
   <section id="market"></section>
 
+  <section id="chips" hidden>
+    <h2>大盤籌碼 <small id="chips-sub"></small></h2>
+    <div class="card">
+      <div class="outlook" id="chips-outlook"></div>
+      <ul class="sig" id="chips-sig"></ul>
+    </div>
+    <div class="chipcols" id="chips-cols"></div>
+    <div class="card tablewrap" id="chips-hist" style="margin-top:12px"></div>
+  </section>
+
   <h2>我的持股 <small>持有中的股票今日訊號</small></h2>
   <div class="grid" id="holdings"></div>
 
@@ -114,6 +133,8 @@ tr:last-child td { border-bottom: 0; }
     本頁由程式依技術指標（均線、RSI、KD、MACD、成交量）自動產生，僅供學習與參考，<b>不構成任何投資建議</b>。
     技術指標無法預測消息面與突發事件，進場前請自行判斷並控制部位與風險。
     「參考停損」= 收盤價 − 2 × ATR(14)。
+    「下一交易日觀察傾向」只綜合當天籌碼（外資／投信現貨、外資台指期未平倉、P/C 比、外資選擇權、融資與量能）與技術面，
+    是觀察方向而非預測，隔夜美股與突發消息常會改變結果。
   </p>
 </main>
 <script>
@@ -185,6 +206,58 @@ function renderMacro(d) {
     || '<div class="empty">今日無新聞資料。</div>';
 }
 
+const yi = (n, d = 1) => n == null ? "—" : `${n > 0 ? "+" : ""}${fmt(n, d)}`;
+const lots = n => n == null ? "—" : `${n > 0 ? "+" : ""}${Number(n).toLocaleString("zh-TW")}`;
+const kv = (k, v, c = "") => `<div class="kv"><span>${k}</span><span class="${c}">${v}</span></div>`;
+
+function renderChips(c, market) {
+  if (!c) return;
+  const $ = id => document.getElementById(id);
+  $("chips").hidden = false;
+  $("chips-sub").textContent = `更新 ${c.updated.slice(5)}`;
+  const sg = c.signal;
+  $("chips-outlook").innerHTML = `<span class="big">下一交易日觀察傾向</span>
+    <span class="badge b-${esc(c.outlook)}" style="font-size:14px">${esc(c.outlook)}</span>
+    <span style="color:var(--muted);font-size:13px">籌碼 ${esc(sg.verdict)}（${sg.score > 0 ? "+" : ""}${sg.score}）＋ 技術面 ${esc(market ? market.verdict : "—")}</span>`;
+  $("chips-sig").innerHTML = [...sg.bull.map(t => `<li class="pos">${esc(t)}</li>`), ...sg.bear.map(t => `<li class="neg">${esc(t)}</li>`)].join("")
+    || "<li>今日籌碼面無明顯訊號</li>";
+
+  const tv = c.turnover, mg = c.margin, inst = c.institutional, fut = c.futures, pc = c.pc, opt = c.options;
+  const cols = [];
+  cols.push(`<div class="card"><div class="name">成交・融資融券</div>
+    ${tv ? kv(`成交金額（${tv.date.slice(5)}）`, `${fmt(tv.value_bn, 0)} 億`) + kv("5 日均量", `${fmt(tv.avg5_bn, 0)} 億`) : kv("成交金額", "無資料")}
+    ${mg ? kv(`融資餘額（${mg.date.slice(5)}）`, `${fmt(mg.balance_bn, 1)} 億`) + kv("融資增減", `${yi(mg.chg_bn, 2)} 億`, cls(mg.chg_bn))
+      + (mg.short_lots != null ? kv("融券餘額", `${mg.short_lots.toLocaleString("zh-TW")} 張（${lots(mg.short_chg)}）`) : "")
+      : kv("融資餘額", "無資料（約 21:00 後公布）")}
+    ${spark((c.history || []).filter(h => h.margin_bn != null).map(h => h.margin_bn))}</div>`);
+  cols.push(`<div class="card"><div class="name">三大法人現貨買賣超 ${inst ? `<span class="code">${inst.date.slice(5)}</span>` : ""}</div>
+    ${inst ? kv("外資", `${yi(inst.foreign_bn)} 億`, cls(inst.foreign_bn)) + kv("投信", `${yi(inst.trust_bn)} 億`, cls(inst.trust_bn))
+      + kv("自營商", `${yi(inst.dealer_bn)} 億`, cls(inst.dealer_bn)) + kv("合計", `${yi(inst.total_bn)} 億`, cls(inst.total_bn)) : kv("三大法人", "無資料")}</div>`);
+  const fr = (n, x) => kv(n, x && x.net != null ? `${lots(x.net)} 口` + (x.chg != null ? `（${lots(x.chg)}）` : "") : "—", x ? cls(x.net) : "");
+  cols.push(`<div class="card"><div class="name">台指期未平倉淨口數 ${fut ? `<span class="code">${fut.date.slice(5)}・括號為日增減</span>` : ""}</div>
+    ${fut ? fr("外資", fut.foreign) + kv("外資多單／空單", `${lots(fut.foreign.long).replace("+", "")}／${lots(fut.foreign.short).replace("+", "")}`)
+      + fr("投信", fut.trust) + fr("自營商", fut.dealer) + spark(fut.history.map(h => h.foreign_net).filter(v => v != null)) : kv("期貨", "無資料")}</div>`);
+  cols.push(`<div class="card"><div class="name">選擇權 ${pc ? `<span class="code">${pc.date.slice(5)}</span>` : ""}</div>
+    ${pc ? kv("P/C 未平倉比", `${fmt(pc.oi_ratio, 1)}%`, pc.oi_ratio >= 100 ? "up" : "down") + kv("P/C 成交量比", `${fmt(pc.vol_ratio, 1)}%`) : kv("P/C ratio", "無資料")}
+    ${opt ? kv("外資買權淨未平倉", `${lots(opt.call.net_lots)} 口（${yi(opt.call.net_amt_bn, 2)} 億）`, cls(opt.call.net_amt_bn))
+      + kv("外資賣權淨未平倉", `${lots(opt.put.net_lots)} 口（${yi(opt.put.net_amt_bn, 2)} 億）`, cls(-opt.put.net_amt_bn)) : ""}
+    ${pc ? spark(pc.history.map(h => h.oi_ratio).filter(v => v != null)) : ""}</div>`);
+  $("chips-cols").innerHTML = cols.join("");
+
+  // 近期趨勢表：依日期合併各來源
+  const rows = {};
+  const put = (d, k, v) => { if (v != null) (rows[d] = rows[d] || {})[k] = v; };
+  (tv?.history || []).forEach(h => put(h.date, "tv", h.value_bn));
+  (c.history || []).forEach(h => { put(h.date, "mg", h.margin_bn); put(h.date, "fx", h.foreign_bn); });
+  (fut?.history || []).forEach(h => put(h.date, "fu", h.foreign_net));
+  (pc?.history || []).forEach(h => put(h.date, "pc", h.oi_ratio));
+  const days = Object.keys(rows).sort().reverse().slice(0, 10);
+  $("chips-hist").innerHTML = days.length ? `<table><thead><tr><th>日期</th><th>成交額(億)</th><th>融資(億)</th><th>外資現貨(億)</th><th>外資期貨淨口數</th><th>P/C 未平倉</th></tr></thead><tbody>
+    ${days.map(d => { const r = rows[d]; return `<tr><td>${d.slice(5)}</td><td>${r.tv != null ? fmt(r.tv, 0) : "—"}</td>
+      <td>${r.mg != null ? fmt(r.mg, 1) : "—"}</td><td class="${cls(r.fx)}">${r.fx != null ? yi(r.fx) : "—"}</td>
+      <td class="${cls(r.fu)}">${lots(r.fu)}</td><td>${r.pc != null ? fmt(r.pc, 1) + "%" : "—"}</td></tr>`; }).join("")}</tbody></table>` : "";
+}
+
 fetch("intraday.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(s => {
   if (!s) return;
   const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
@@ -209,6 +282,7 @@ fetch("data.json?t=" + Date.now()).then(r => r.json()).then(d => {
       ${card({ ...m, name: "加權指數", code: "TAIEX", k: NaN, d: NaN, stop: NaN }, false)
         .replace(/<span>K\/D[^<]*<\/span><span>參考停損[^<]*<\/span>/, "")}`;
   }
+  renderChips(d.chips, d.market);
   fill("holdings", d.holdings, true, "尚未設定持股。請在 GitHub Secret「HOLDINGS」或本機 holdings.json 填入持股。");
   renderMacro(d);
   document.getElementById("picks-sub").textContent = "依技術面評分排序，分數越高訊號越多";
