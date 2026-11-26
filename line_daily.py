@@ -98,6 +98,36 @@ def stock_rows(r, extra):
 
 
 # ---------- 四張卡 ----------
+def chips_rows(c):
+    """大盤籌碼：傾向＋成交、融資、法人、期貨、選擇權各一行。"""
+    if not c:
+        return []
+    sg = c["signal"]
+    out = [title("大盤籌碼"),
+           row(T("明日觀察傾向", flex=5), T(c["outlook"], flex=4, align="end", weight="bold",
+                                         color=verdict_color(c["outlook"])), margin="sm")]
+    kv = lambda k, v, col=None: row(T(k, "xs", flex=4, color=MUTED), T(v, "xs", flex=6, align="end",
+                                                                       **({"color": col} if col else {})), margin="sm")
+    tv, mg, inst, fut, pc = (c.get(k) for k in ("turnover", "margin", "institutional", "futures", "pc"))
+    if tv:
+        out.append(kv("成交金額", f"{tv['value_bn']:,.0f} 億（5日均 {tv['avg5_bn']:,.0f}）"))
+    if mg:
+        out.append(kv(f"融資 {mg['date'][5:].replace('-', '/')}", f"{mg['balance_bn']:,.0f} 億（{mg['chg_bn']:+,.1f}）",
+                      color(mg["chg_bn"])))
+    if inst:
+        out.append(kv("外資／投信", f"{inst['foreign_bn']:+,.0f}／{inst['trust_bn']:+,.0f} 億", color(inst["foreign_bn"])))
+    if fut and fut["foreign"]["net"] is not None:
+        ch = fut["foreign"]["chg"]
+        out.append(kv("外資台指期淨單", f"{fut['foreign']['net']:+,} 口" + (f"（{ch:+,}）" if ch is not None else ""),
+                      color(fut["foreign"]["net"])))
+    if pc:
+        out.append(kv("P/C 未平倉比", f"{pc['oi_ratio']:.1f}%"))
+    sigs = ["▲" + tag(x) for x in sg["bull"]] + ["▼" + tag(x) for x in sg["bear"]]
+    if sigs:
+        out.append(T("　".join(sigs), "xxs", color=MUTED, wrap=True, margin="sm"))
+    return out + [sep()]
+
+
 def card_holdings(d, day):
     body = []
     m = d.get("market")
@@ -111,6 +141,7 @@ def card_holdings(d, day):
               else m["verdict"], "xs", color=verdict_color(m["verdict"]), wrap=True, margin="xs"),
             sep(),
         ]
+    body += chips_rows(d.get("chips"))
     body.append(title("我的持股"))
     hs = d.get("holdings") or []
     if not hs:
@@ -190,6 +221,8 @@ def alt_text(d, day):
     m = d.get("market")
     if m:
         parts.append(f"加權 {m['close']:,.0f}（{pct(m['change_pct'])}）{m['verdict']}")
+    if d.get("chips"):
+        parts.append(f"明日傾向 {d['chips']['outlook']}")
     hs = d.get("holdings") or []
     if hs:
         parts.append(f"持股 {len(hs)} 檔 漲{sum(r['change_pct'] > 0 for r in hs)} 跌{sum(r['change_pct'] < 0 for r in hs)}")
@@ -209,6 +242,10 @@ def text_message(d):
     m = d.get("market")
     if m:
         L.append(f"加權 {m['close']:,.2f}（{pct(m['change_pct'])}）{m['verdict']}")
+    c = d.get("chips")
+    if c:
+        L.append(f"明日觀察傾向：{c['outlook']}（籌碼 {c['signal']['verdict']}）")
+        L += ["▲" + x for x in c["signal"]["bull"]] + ["▼" + x for x in c["signal"]["bear"]]
     L += ["", "【我的持股】"]
     for r in d.get("holdings") or []:
         L.append(f"{r['code']} {r['name']} {num(r['close'])} {pct(r['change_pct'])} {r['verdict']}")

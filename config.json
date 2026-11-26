@@ -6,6 +6,8 @@
   "top_picks": 20,
   "stop_loss_pct": 10,
   "intraday": {"drop_pct": 5, "include_picks": true},
+  "chips": {"foreign_cash_bn": 50, "trust_cash_bn": 10, "fut_chg_lots": 2000, "fut_heavy_short": -30000,
+            "pc_high": 120, "pc_low": 80, "volume_ratio": 1.2},
 
   "calendar_days": 30,
   "earnings_us": {
