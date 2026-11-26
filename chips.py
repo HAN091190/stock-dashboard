@@ -157,15 +157,16 @@ def institutional(today):
 
 # ---------- 期交所 ----------
 
-def taifex_csv(path, today, **form):
-    start = today - timedelta(days=40)
+def taifex_csv(path, today, days=25, **form):
+    start = today - timedelta(days=days)  # 期交所部分報表查詢區間上限約一個月
     r = requests.post(f"https://www.taifex.com.tw/cht/3/{path}", headers=UA, timeout=30,
                       data={"queryStartDate": start.strftime("%Y/%m/%d"),
                             "queryEndDate": today.strftime("%Y/%m/%d"), **form})
     r.raise_for_status()
     text = r.content.decode("cp950", errors="replace")
-    if "日期" not in text[:200]:
-        raise RuntimeError("期交所回傳非 CSV（可能查詢無資料或被阻擋）")
+    if "日期" not in text[:300]:
+        snippet = re.sub(r"<[^>]+>|\s+", " ", text)[:200]
+        raise RuntimeError(f"期交所回傳非 CSV：{snippet}")
     df = pd.read_csv(io.StringIO(text), index_col=False, dtype=str)
     df.columns = [re.sub(r"\s", "", c) for c in df.columns]
     df = df.apply(lambda s: s.str.strip() if s.dtype == object else s)
@@ -220,15 +221,22 @@ def options(today):
     df = taifex_csv("callsAndPutsDateDown", today, commodityId="TXO")
     cp, who = col(df, "買賣權"), col(df, "身份")
     lots, amt = col(df, "未平倉口數", "淨額"), col(df, "未平倉契約金額", "淨額")
+    name = next((c for c in df.columns if "商品" in c), None)
+    if name is not None:
+        txo = df[name].str.contains("臺指選擇權|台指選擇權|TXO", na=False)
+        if txo.any():
+            df = df[txo]
     d = df["日期"].max()
     day = df[(df["日期"] == d) & df[who].str.contains("外資", na=False)]
     res = {"date": d.date().isoformat()}
-    for key, word in (("call", "買權"), ("put", "賣權")):
+    if day.empty:
+        raise RuntimeError(f"查無外資資料，身份別有：{sorted(df[who].dropna().unique())[:6]}")
+    for key, word in (("call", "買權|CALL|Call|call"), ("put", "賣權|PUT|Put|put")):
         r = day[day[cp].str.contains(word, na=False)]
         if len(r):
             res[key] = {"net_lots": int(num(r.iloc[0][lots])), "net_amt_bn": round(num(r.iloc[0][amt]) / 1e5, 2)}
     if "call" not in res or "put" not in res:
-        raise RuntimeError("查無外資買賣權資料")
+        raise RuntimeError(f"查無外資買賣權資料，買賣權別有：{sorted(day[cp].dropna().unique())}，欄位：{list(df.columns)[:6]}")
     return res
 
 
