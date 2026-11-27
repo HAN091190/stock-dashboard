@@ -14,12 +14,30 @@
   "3163|▼虧損已達  停損線（）",
   "4989|▼虧損已達  停損線（）",
   "6488|▼虧損已達  停損線（）",
+  "6925|▲MACD 翻多",
   "7767|▲MACD 翻多",
   "7767|▲帶量上漲（量 >  倍均量）",
   "8299|▼虧損已達  停損線（）",
   "8358|▼虧損已達  停損線（）"
  ],
  "alerts": [
+  {
+   "code": "6925",
+   "name": "意藍",
+   "price": 115.0,
+   "change_pct": 1.32,
+   "score": 7,
+   "verdict": "偏多",
+   "ma20": 107.06,
+   "stop": 88.33,
+   "holding": false,
+   "time": "11:35:57",
+   "action": "進場訊號",
+   "signals": [
+    "▲MACD 翻多"
+   ],
+   "at": "11:37"
+  },
   {
    "code": "00631L",
    "name": "元大台灣50正2",
@@ -273,46 +291,46 @@
    "at": "10:23"
   }
  ],
- "updated": "2026-11-27 10:23",
+ "updated": "2026-11-27 11:37",
  "holdings": [
   {
    "code": "0050",
    "name": "元大台灣50",
-   "price": 92.6,
-   "change_pct": 2.55,
+   "price": 92.55,
+   "change_pct": 2.49,
    "score": 0,
    "verdict": "中性",
-   "ma20": 96.39,
+   "ma20": 96.38,
    "stop": 79.36,
    "holding": true,
-   "time": "10:23:04",
-   "return_pct": 39.98
+   "time": "11:36:09",
+   "return_pct": 39.91
   },
   {
    "code": "00631L",
    "name": "元大台灣50正2",
-   "price": 25.49,
-   "change_pct": 7.19,
+   "price": 25.45,
+   "change_pct": 7.02,
    "score": 0,
    "verdict": "中性",
    "ma20": 28.33,
    "stop": 17.54,
    "holding": true,
-   "time": "10:23:39",
-   "return_pct": -20.27
+   "time": "11:36:59",
+   "return_pct": -20.39
   },
   {
    "code": "1303",
    "name": "南亞",
-   "price": 245.0,
-   "change_pct": 0.41,
+   "price": 244.0,
+   "change_pct": 0.0,
    "score": 1,
    "verdict": "中性",
-   "ma20": 260.68,
+   "ma20": 260.62,
    "stop": 190.21,
    "holding": true,
-   "time": "10:23:10",
-   "return_pct": 221.06
+   "time": "11:36:00",
+   "return_pct": 219.75
   },
   {
    "code": "1560",
@@ -324,21 +342,21 @@
    "ma20": 675.55,
    "stop": 514.29,
    "holding": true,
-   "time": "10:23:13",
+   "time": "11:35:53",
    "return_pct": 47.82
   },
   {
    "code": "2308",
    "name": "台達電",
-   "price": 1115.0,
-   "change_pct": -0.45,
+   "price": 1120.0,
+   "change_pct": 0.0,
    "score": 0,
    "verdict": "中性",
-   "ma20": 1137.0,
+   "ma20": 1137.25,
    "stop": 913.14,
    "holding": true,
-   "time": "10:23:15",
-   "return_pct": -38.09
+   "time": "11:36:10",
+   "return_pct": -37.81
   },
   {
    "code": "2330",
@@ -350,72 +368,72 @@
    "ma20": 2212.5,
    "stop": 1927.86,
    "holding": true,
-   "time": "10:23:15",
+   "time": "11:36:10",
    "return_pct": 16.24
   },
   {
    "code": "2449",
    "name": "京元電子",
-   "price": 182.0,
-   "change_pct": -3.19,
+   "price": 183.0,
+   "change_pct": -2.66,
    "score": 0,
    "verdict": "中性",
-   "ma20": 203.15,
+   "ma20": 203.2,
    "stop": 153.57,
    "holding": true,
-   "time": "10:23:31"
+   "time": "11:36:36"
   },
   {
    "code": "2454",
    "name": "聯發科",
-   "price": 3695.0,
-   "change_pct": -0.27,
+   "price": 3670.0,
+   "change_pct": -0.94,
    "score": -1,
    "verdict": "中性",
-   "ma20": 3757.5,
+   "ma20": 3756.25,
    "stop": 3050.0,
    "holding": true,
-   "time": "10:23:36",
-   "return_pct": 118.91
+   "time": "11:36:56",
+   "return_pct": 117.43
   },
   {
    "code": "2492",
    "name": "華新科",
-   "price": 210.0,
-   "change_pct": 0.0,
+   "price": 208.0,
+   "change_pct": -0.95,
    "score": -2,
    "verdict": "偏弱",
-   "ma20": 253.95,
+   "ma20": 253.85,
    "stop": 160.43,
    "holding": true,
-   "time": "10:22:51",
-   "return_pct": -30.45
+   "time": "11:37:21",
+   "return_pct": -31.11
   },
   {
    "code": "3163",
    "name": "波若威",
-   "price": 353.5,
-   "change_pct": -4.2,
+   "price": 352.5,
+   "change_pct": -4.47,
    "score": 0,
    "verdict": "中性",
-   "ma20": 420.23,
+   "ma20": 420.18,
    "stop": 290.07,
    "holding": true,
-   "time": "10:23:11",
-   "return_pct": -45.51
+   "time": "11:35:46",
+   "return_pct": -45.66
   },
   {
    "code": "4989",
    "name": "榮科",
-   "price": 44.0,
-   "change_pct": -1.01,
+   "price": 43.95,
+   "change_pct": -1.12,
    "score": 0,
    "verdict": "中性",
-   "ma20": 51.84,
+   "ma20": 51.83,
    "stop": 35.03,
    "holding": true,
-   "time": "10:22:31",
-   "return_pct": -27.77
+   "time": "11:35:56",
+   "return_pct": -27.86
   },
   {
    "code": "6488",
@@ -427,34 +445,34 @@
    "ma20": 563.45,
    "stop": 415.5,
    "holding": true,
-   "time": "10:23:17",
+   "time": "11:36:07",
    "return_pct": -29.58
   },
   {
    "code": "8299",
    "name": "群聯",
-   "price": 1645.0,
-   "change_pct": 0.92,
+   "price": 1600.0,
+   "change_pct": -1.84,
    "score": 3,
    "verdict": "中性偏多",
-   "ma20": 1590.75,
+   "ma20": 1588.5,
    "stop": 1360.0,
    "holding": true,
-   "time": "10:23:27",
-   "return_pct": -22.52
+   "time": "11:36:18",
+   "return_pct": -24.63
   },
   {
    "code": "8358",
    "name": "金居",
-   "price": 263.0,
-   "change_pct": -2.05,
+   "price": 262.5,
+   "change_pct": -2.23,
    "score": 0,
    "verdict": "中性",
-   "ma20": 320.0,
+   "ma20": 319.98,
    "stop": 204.57,
    "holding": true,
-   "time": "10:22:58",
-   "return_pct": -43.02
+   "time": "11:37:32",
+   "return_pct": -43.13
   }
  ]
 }
